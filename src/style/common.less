@@ -1,0 +1,254 @@
+.d-flex {
+  display: flex;
+}
+
+.d-wrap {
+  flex-wrap: wrap;
+}
+
+.d-flex-i-cent {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.d-flex-bet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-flex-bet-cent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-flex-cent-cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-around-cent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name {
+  text-align: center;
+  color: #17181B;
+  font-size: 1.3125rem;
+}
+
+.btn-style {
+  width: 4.1rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  font-size: .8rem;
+  color: #fff;
+  text-align: center;
+  border-radius: .7813rem;
+  // border: .0625rem solid #17181B;
+  background: linear-gradient(-90deg, #2F4CFC, #2F6FFF);
+}
+
+.ellipsis-one {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis-tow {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.learn-more {
+  width: 7.0625rem;
+  height: 2.375rem;
+  margin: 0 auto;
+  font-size: .875rem;
+  color: #fff;
+  text-align: center;
+  line-height: 2.375rem;
+  background: linear-gradient(-90deg, #2F4CFC, #2F6FFF);
+  box-shadow: 0px 6px 20px 0px rgba(0, 24, 46, 0.16);
+  border-radius: 1.1875rem;
+}
+
+.right-arrow {
+  width: .5938rem;
+  height: .4375rem;
+  margin-left: .5313rem;
+}
+
+//图片放大
+.van-image__img {
+  width: 100%;
+  padding: .625rem;
+}
+
+// 选择我们的理由
+.reason-li {
+  position: relative;
+  width: 48%;
+  margin: 0 .6875rem .6875rem 0;
+  padding: 1.5625rem 0 1.9688rem;
+  text-align: center;
+  border-radius: 2.5rem 0 2.5rem 0;
+  background: #fff;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(4n) {
+    border-radius: 0 2.5rem 0 2.5rem;
+
+  }
+}
+
+.reason-img {
+  width: 2.9375rem;
+  height: 2.9688rem;
+  margin-bottom: .9375rem;
+}
+
+.sign-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4.125rem;
+  height: 4.125rem;
+}
+
+
+.reason-text {
+  margin-top: .625rem;
+  font-size: .8125rem;
+  color: #6D6D6D;
+}
+
+// 更多特色功能等
+.function-item {
+  width: 32%;
+  margin: 0 0 0.4375rem 0;
+  padding: 0.625rem 0 1.1875rem;
+  text-align: center;
+  border-radius: 0.625rem;
+  background: #D6E2FF;
+
+  &:nth-child(1),
+  &:nth-child(3),
+  &:nth-child(7),
+  &:nth-child(9) {
+    background: #FFEFDB;
+  }
+
+  .function-icon {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    margin-bottom: .8125rem;
+    vertical-align: bottom;
+  }
+
+  h6 {
+    color: #17181B;
+    font-size: .9375rem;
+  }
+
+}
+
+// 软硬件一体化解决方案
+.paragraph-style {
+  .paragraph-icon {
+    width: 1.1563rem;
+    height: 0.8125rem;
+    margin: 0 0.25rem 0 0;
+  }
+
+  .paragraph-name {
+    color: #17181B;
+    font-size: 1.0625rem;
+  }
+
+  .paragraph-img {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+  }
+
+  .paragraph-text {
+    position: relative;
+    margin: 0.5375rem 0 0 1.3rem;
+    color: #6D6D6D;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.35rem;
+      left: -0.7rem;
+      width: 0.3125rem;
+      height: 0.3125rem;
+      background: #FF9516;
+    }
+  }
+}
+
+
+// 首页矩阵和IVR功能优势
+.capacity-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  padding: 1.25rem .7625rem;
+  margin: 0 .6875rem .6875rem 0;
+  text-align: center;
+  border-radius: .8125rem;
+  background: #FFFFFF;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .capacity-img {
+    width: 1.9375rem;
+    height: 1.9375rem;
+    vertical-align: bottom;
+    margin-bottom: .9063rem;
+  }
+
+  .capacity-title {
+    font-size: 1rem;
+    color: #17181B;
+  }
+
+  .capacity-line {
+    display: inline-block;
+    width: .8125rem;
+    height: .0938rem;
+    margin: .6563rem 0 .4375rem;
+    border-radius: .0469rem;
+    background: #2F4CFC;
+  }
+
+  .capacity-text {
+    font-size: .8125rem;
+    text-align: left;
+    line-height: 1.25rem;
+    color: #6D6D6D;
+  }
+}
