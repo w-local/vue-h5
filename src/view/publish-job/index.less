@@ -29,10 +29,6 @@
 .form-item {
   padding: .75rem 1rem;
   background: #fff;
-
-  &:first-child {
-    border-bottom: .625rem solid rgba(238, 242, 249, 1);
-  }
 }
 
 .area {
@@ -58,27 +54,8 @@
   }
 }
 
-.required-icon {
-  width: .5rem;
-  height: .5rem;
-  margin:0 4px 0 -10px;
-}
 
-.add-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
 
-.img-item {
-  width: 3.5rem;
-  height: 3.5rem;
-  margin: .9375rem .98rem 0 0;
-  border-radius: .3125rem;
-
-  &:nth-child(5n) {
-    margin-right: 0;
-  }
-}
 
 .form-btn {
   position: absolute;
@@ -103,4 +80,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     transform: none;
   }
+  &.van-cell--borderless {
+    margin-top: .4375rem;
+  }
 }
+

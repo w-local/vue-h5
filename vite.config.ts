@@ -49,6 +49,7 @@ export default (): UserConfig => {
       '@vicinityImg': resolve(__dirname, 'src/assets/vicinityImg'),
       '@detailImg': resolve(__dirname, 'src/assets/detailImg'),
       '@publishImg': resolve(__dirname, 'src/assets/publishImg'),
+      '@hireImg': resolve(__dirname, 'src/assets/hireImg'),
       '@temp': resolve(__dirname, 'src/components'),
     }
   },

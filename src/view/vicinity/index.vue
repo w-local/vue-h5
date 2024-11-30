@@ -3,6 +3,10 @@
     <div class="d-flex-i-cent">
       <img class="left-arrow" src="@commonImg/left-arrow.png" />
       <h1 class="head-name">附近</h1>
+      <div class="d-flex-i-cent">
+        <img class="switch-icon" src="@commonImg/dizhi-icon.png" />
+        <span class="switch-text">切换城市</span>
+      </div>
     </div>
     <div class="head-list d-flex-bet-cent">
       <div>
@@ -23,12 +27,18 @@
     </div>
   </div>
 
-  <van-dropdown-menu>
+  <!-- <van-dropdown-menu>
     <van-dropdown-item v-model="value1" :options="areaData" />
     <van-dropdown-item v-model="value2" :options="typeData" />
-  </van-dropdown-menu>
+  </van-dropdown-menu> -->
 
   <div class="content-wrap">
+    <div class="type-list d-flex-i-cent">
+      <div class="type-item" v-for="(item, idx) in typeData" :key="idx" :style="{ background: `${item.bg}` }">
+        <img class="type-img" :src="getAssetsFile(`vicinityImg/${item.icon}.png`)" />
+        <div class="">{{ item.name }}</div>
+      </div>
+    </div>
     <img class="banner-img" src="@vicinityImg/banner-img.png" />
     <div>
       <div class="info-item d-flex" v-for="(item, idx) in infoData" :key="idx">
@@ -60,10 +70,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { getAssetsFile } from '@config/utils'
-import { areaData, typeData, infoData } from './data'
-const value1 = ref(0)
-const value2 = ref('a')
-
+import { typeData, infoData } from './data'
+// const value1 = ref(0)
+// const value2 = ref('a')
 </script>
 
 <style lang="less" scoped>
