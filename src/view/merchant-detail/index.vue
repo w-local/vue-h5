@@ -29,7 +29,7 @@
           <img class="introduce-icon" src="@detailImg/introduce-icon.png" />
           <span class="introduce-name">图片介绍</span>
         </div>
-        <img v-for="idx in 4" :key="idx" class="introduce-img" src="@detailImg/test-img1.png" />
+        <img class="introduce-img" src="@detailImg/test-img1.png" />
       </div>
     </div>
   </div>
