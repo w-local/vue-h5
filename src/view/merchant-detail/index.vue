@@ -1,6 +1,6 @@
 <template>
   <div class="detail-wrap">
-    <div class="head-content d-flex-bet-cent">
+    <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" />
       <h1 class="head-name">发布商家</h1>
       <img class="share-icon" src="@detailImg/fenxiang.png" />
@@ -29,7 +29,7 @@
           <img class="introduce-icon" src="@detailImg/introduce-icon.png" />
           <span class="introduce-name">图片介绍</span>
         </div>
-        <img class="introduce-img" src="@detailImg/test-img1.png" />
+        <img v-for="idx in 4" :key="idx" class="introduce-img" src="@detailImg/test-img1.png" />
       </div>
     </div>
   </div>
