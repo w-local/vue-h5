@@ -1,11 +1,19 @@
 <template>
   <div class="detail-wrap">
     <div class="head-wrap d-flex-bet">
-      <img class="left-arrow" src="@commonImg/left-arrow.png" />
-      <h1 class="head-name">发布商家</h1>
-      <img class="share-icon" src="@detailImg/fenxiang.png" />
+      <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
+      <h1 class="head-name">商家详情</h1>
+      <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
     </div>
-    <img class="banner-img" src="@detailImg/test-img.png" />
+    <van-swipe :autoplay="3000">
+      <van-swipe-item v-for="idx in 4" ::key="idx">
+        <img class="banner-img" src="@detailImg/test-img.png" />
+      </van-swipe-item>
+      <template #indicator="{ active, total }">
+        <div class="custom-indicator">{{ active + 1 }}/{{ total }}</div>
+      </template>
+    </van-swipe>
+    <!-- <img class="banner-img" src="@detailImg/test-img.png" /> -->
     <div class="content-wrap">
       <div class="info-data">
         <div class="d-flex-bet-cent">
@@ -33,14 +41,23 @@
       </div>
     </div>
   </div>
+  <van-share-sheet v-model:show="showShare" :options="options" @select="onSelect" />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { getAssetsFile } from '@config/utils'
-import { areaData, typeData, infoData } from './data'
-const value1 = ref(0)
-const value2 = ref('a')
+import useRouterNavigation from '@config/utils'
+const { navigateBack } = useRouterNavigation()
+
+const showShare = ref(false)
+const options = [
+  { name: '微信好友', icon: 'wechat' },
+  { name: '朋友圈', icon: 'wechat-moments' }
+]
+const onSelect = (option: any) => {
+  alert(option.name)
+  showShare.value = false
+}
 </script>
 
 <style lang="less" scoped>

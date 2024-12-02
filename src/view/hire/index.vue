@@ -1,13 +1,13 @@
 <template>
   <div class="head-wrap">
     <div class="d-flex-i-cent">
-      <img class="left-arrow" src="@commonImg/left-arrow.png" />
+      <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
       <h1 class="head-name">招聘</h1>
     </div>
     <div class="head-list d-flex-bet-cent">
-      <div>
+      <div @click="navigateTo('/publishJob')">
         <img class="head-icon" src="@commonImg/fbsj.png" />
-        <div>发布商家</div>
+        <div>发布招聘</div>
       </div>
       <div>
         <img class="head-icon" src="@commonImg/lxkf.png" />
@@ -15,18 +15,13 @@
       </div>
     </div>
     <div class="head-search d-flex-bet-cent">
-      <div class="d-flex-i-cent">
-        <img class="search-icon" src="@commonImg/search-icon.png" />
-        <span>搜索关键词</span>
-      </div>
+      <van-search v-model="value" placeholder="搜索关键词" />
       <div class="search-btn">搜索</div>
     </div>
   </div>
-
-
   <div class="content-wrap">
     <div class="type-list d-flex-i-cent">
-      <div class="type-item" v-for="(item, idx) in typeData" :key="idx" :style="{ background: `${item.bg}` }">
+      <div class="type-item" v-for="(item, idx) in typeData" :key="idx" :style="{ background: `${item.bg}` }" >
         <img class="type-img" :src="getAssetsFile(`hireImg/${item.icon}.png`)" />
         <div class="">{{ item.name }}</div>
       </div>
@@ -69,9 +64,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { getAssetsFile } from '@config/utils'
+import useRouterNavigation, { getAssetsFile } from '@config/utils'
 import { typeData, infoData } from './data'
-// const value1 = ref(0)
+
+const { navigateTo,navigateBack } = useRouterNavigation()
+
+const value = ref('');
 // const value2 = ref('a')
 </script>
 

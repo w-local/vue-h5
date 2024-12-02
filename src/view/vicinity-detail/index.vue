@@ -1,7 +1,7 @@
 <template>
   <div class="head-wrap">
     <div class="d-flex-i-cent">
-      <img class="left-arrow" src="@commonImg/left-arrow.png" />
+      <img class="left-arrow" src="@commonImg/left-arrow.png"  @click="navigateBack"  />
       <h1 class="head-name">附近</h1>
     </div>
     <div class="head-list d-flex-bet-cent">
@@ -15,10 +15,7 @@
       </div>
     </div>
     <div class="head-search d-flex-bet-cent">
-      <div class="d-flex-i-cent">
-        <img class="search-icon" src="@commonImg/search-icon.png" />
-        <span>搜索关键词</span>
-      </div>
+      <van-search v-model="value" placeholder="搜索关键词" />
       <div class="search-btn">搜索</div>
     </div>
   </div>
@@ -59,8 +56,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { getAssetsFile } from '@config/utils'
+import useRouterNavigation,{ getAssetsFile } from '@config/utils'
 import { areaData, typeData, infoData } from './data'
+const { navigateBack } = useRouterNavigation()
+
+const value = ref('')
 const value1 = ref(0)
 const value2 = ref('a')
 

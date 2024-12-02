@@ -25,5 +25,9 @@ export default function useRouterNavigation() {
     }
   }
 
-  return { navigateTo }
+  function navigateBack(){
+    router.go(-1)
+  }
+
+  return { navigateTo,navigateBack }
 }
