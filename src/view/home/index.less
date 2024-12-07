@@ -38,11 +38,22 @@
     flex: 1;
     position: relative;
     margin: 0 6px 0 4px;
-    padding: 0 .45rem 0 .8rem;
+    // padding: 0 .45rem 0 .8rem;
     height: 2.25rem;
     font-size: .78rem;
     color: rgba(0, 0, 0, 0.85);
-    background: url('@homeImg/search-bg.png') no-repeat;
+    z-index: 2;
+    // background: url('@homeImg/search-bg.png') no-repeat;
+    .search-bg{
+      width: 100%;
+      height: 36px;
+    }
+    .search-cont{
+      position: absolute;
+      top: .3125rem;
+      width: 94%;
+      left: .6875rem;
+    }
 
     .search-icon {
       width: .85rem;

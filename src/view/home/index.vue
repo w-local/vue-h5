@@ -10,12 +10,15 @@
           </div>
           <img class="arrow" src="@homeImg/arrow-bottom.png" />
         </div>
-        <div class="search d-flex-bet-cent">
-          <div class="d-flex-i-cent">
-            <img class="search-icon" src="@homeImg/search-icon.png" />
-            <span>搜索关键词</span>
+        <div class="search ">
+          <img class="search-bg" src="@homeImg/search-bg.png" />
+          <div class="search-cont d-flex-bet-cent">
+            <div class="d-flex-i-cent ">
+              <img class="search-icon" src="@homeImg/search-icon.png" />
+              <span>搜索关键词</span>
+            </div>
+            <div class="search-btn">搜索</div>
           </div>
-          <div class="search-btn">搜索</div>
         </div>
         <img class="add-icon" src="@homeImg/add-icon.png" />
       </div>
