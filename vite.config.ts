@@ -50,6 +50,7 @@ export default (): UserConfig => {
       '@detailImg': resolve(__dirname, 'src/assets/detailImg'),
       '@publishImg': resolve(__dirname, 'src/assets/publishImg'),
       '@hireImg': resolve(__dirname, 'src/assets/hireImg'),
+      '@myImg': resolve(__dirname, 'src/assets/myImg'),
       '@temp': resolve(__dirname, 'src/components'),
     }
   },

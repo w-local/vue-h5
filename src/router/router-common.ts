@@ -35,5 +35,25 @@ export default [
     path: '/jobDetail', //职位详情
     component: () => import('../view/job-detail/index.vue')
   },
+  {
+    path: '/my', //我的
+    component: () => import('../view/my/index.vue')
+  },
+  {
+    path: '/myPublish', //我的发布
+    component: () => import('../view/my-publish/index.vue')
+  },
+  {
+    path: '/myCollect', //我的收藏
+    component: () => import('../view/my-collect/index.vue')
+  },
+  {
+    path: '/myBrowse', //浏览记录
+    component: () => import('../view/my-browse/index.vue')
+  },
+  {
+    path: '/agreement', //用户协议
+    component: () => import('../view/agreement/index.vue')
+  },
 ]
 
