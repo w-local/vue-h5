@@ -8,7 +8,7 @@
       <div class="area d-flex-bet-cent">
         <div class="d-flex-i-cent">
           <img class="area-icon" src="@commonImg/location-h-icon.png" />
-          <span>所在地区</span>
+          <span class="area-name">所在地区</span>
         </div>
         <img class="area-arrow" src="@commonImg/right-arrow-s.png" />
       </div>
@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import useRouterNavigation, { getAssetsFile } from '@config/utils'
+import useRouterNavigation from '@config/utils'
 
 const { navigateBack } = useRouterNavigation()
 const value1 = ref('')

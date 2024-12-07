@@ -30,6 +30,10 @@ export default [
   {
     path: '/publishJob', //发布商家
     component: () => import('../view/publish-job/index.vue')
-  }
+  },
+  {
+    path: '/jobDetail', //职位详情
+    component: () => import('../view/job-detail/index.vue')
+  },
 ]
 

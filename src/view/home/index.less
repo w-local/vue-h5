@@ -38,11 +38,11 @@
     flex: 1;
     position: relative;
     margin: 0 6px 0 4px;
-    padding: 0 .1875rem 0 .8rem;
+    padding: 0 .45rem 0 .8rem;
     height: 2.25rem;
     font-size: .78rem;
     color: rgba(0, 0, 0, 0.85);
-    background: url('@homeImg/search-bg.png') no-repeat 50% / cover;
+    background: url('@homeImg/search-bg.png') no-repeat;
 
     .search-icon {
       width: .85rem;
@@ -84,11 +84,13 @@
 }
 
 .content-wrap {
+  position: relative;
   width: 100%;
-  height: 62.3125rem;
   margin-top: -1.25rem;
-  padding: .625rem;
-  background: url('@homeImg/home-bg.png') no-repeat 50% / cover;
+  padding: 0.625rem 0.625rem 3.75rem ;
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
+  background: #EEF2F9 url(/src/assets/homeImg/home-bg.png) no-repeat;
 
   .type-bg {
     width: 100%;
@@ -128,7 +130,7 @@
   }
 
   .focus-img {
-    width: 102.5%;
+    width: 101.8%;
     height: 9.8125rem;
     margin: 0 -3px;
   }
@@ -138,14 +140,23 @@
   }
 
   .tab-item {
+    position: relative;
     width: 100%;
     margin-right: .625rem;
     padding: 1rem 0 .9375rem .8125rem;
     height: 6.875rem;
-    background: no-repeat;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    .tab-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     .tab-name {
@@ -204,11 +215,39 @@
     color: #0169F6;
     letter-spacing: .125rem;
   }
- 
+
+  .event-item {
+    margin-top: .5rem;
+    padding: .9375rem .625rem;
+    border-radius: .375rem;
+    background: #fff;
+  }
+
+  .event-name {
+    font-weight: bold;
+    font-size: .9375rem;
+    line-height: 1.3125rem;
+    letter-spacing: .0625rem;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .event-type {
+    width: 5rem;
+    margin-top: 0.5rem;
+    color: #b3b0b0;
+    font-size: .75rem;
+  }
+
+  .event-icon {
+    width: .75rem;
+    height: .75rem;
+    margin-right: .1875rem;
+  }
 
   .event-img {
-    margin-left: -0.3125rem;
-    margin-bottom: -10px;
+    width: 8.625rem;
+    height: 5rem;
+    margin-left: .3125rem;
   }
 }
 
@@ -254,7 +293,8 @@
 
 .tabbar-add {
   position: relative;
-  &::after{
+
+  &::after {
     content: '';
     position: absolute;
     left: -3px;
@@ -264,6 +304,7 @@
     border-radius: 50%;
     top: -8px;
   }
+
   img {
     position: relative;
     width: 2.5625rem;

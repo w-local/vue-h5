@@ -17,7 +17,7 @@
     <div class="content-wrap">
       <div class="info-data">
         <div class="d-flex-bet-cent">
-          <div class="info-name">曼谷TKV</div>
+          <div class="info-name ellipsis-one">曼谷TKV</div>
           <div class="info-location d-flex-i-cent">
             <img class="location-icon" src="@commonImg/location-icon.png" />
             <span>曼谷</span>
@@ -46,13 +46,13 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import useRouterNavigation from '@config/utils'
+import useRouterNavigation, { getAssetsFile } from '@config/utils'
 const { navigateBack } = useRouterNavigation()
 
 const showShare = ref(false)
 const options = [
-  { name: '微信好友', icon: 'wechat' },
-  { name: '朋友圈', icon: 'wechat-moments' }
+  { name: '微信好友', icon: getAssetsFile('commonImg/icon-wechat.png') },
+  { name: '朋友圈', icon: getAssetsFile('commonImg/icon-moments.png') }
 ]
 const onSelect = (option: any) => {
   alert(option.name)

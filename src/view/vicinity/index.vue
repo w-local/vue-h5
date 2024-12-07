@@ -3,7 +3,7 @@
     <div class="d-flex-i-cent">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
       <h1 class="head-name">附近</h1>
-      <div class="d-flex-i-cent">
+      <div class="d-flex-i-cent switch-content ellipsis-one">
         <img class="switch-icon" src="@commonImg/dizhi-icon.png" />
         <span class="switch-text">切换城市</span>
       </div>
