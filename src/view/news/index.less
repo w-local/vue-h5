@@ -1,8 +1,9 @@
 .head-wrap {
   height: 13.75rem;
-  padding: 3rem .625rem 0;
+  padding-top: 3rem;
+  margin-bottom: -40px;
   color: #fff;
-  background: url('@commonImg/head-bg.png') no-repeat 50% / cover;
+  background: url('@commonImg/head-bg1.png') no-repeat;
 
   .head-name {
     font-weight: normal;
@@ -10,5 +11,79 @@
     color: #FFFFFF;
     line-height: 1.5rem;
   }
-  
+
+}
+
+.news-content {
+  margin-top: -8.625rem;
+  background: #fff;
+
+  .news-title {
+    padding: .9375rem .8125rem .3125rem;
+    font-weight: bold;
+    font-size: .75rem;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .news-info {
+    height: 3.875rem;
+    padding: .625rem .875rem .5625rem;
+    border-bottom: 1px solid #F3F3F5;
+  }
+
+  .news-name {
+    margin-bottom: .125rem;
+    font-size: .875rem;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .company-name {
+    margin-left: .375rem;
+    margin-top: 3px;
+    font-size: .6875rem;
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  .news-txt {
+    font-size: .75rem;
+    color: rgba(0, 0, 0, 0.64);
+  }
+
+  .news-img {
+    position: relative;
+    width: 2.625rem;
+    height: 2.625rem;
+    margin-right: .6875rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .dot {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: .3125rem;
+      height: .3125rem;
+      border-radius: 50%;
+      background: #9E9E9F;
+
+      &.active {
+        background: #FF552D;
+      }
+    }
+  }
+
+  .news-time {
+    margin-top: .1875rem;
+    font-size: .6875rem;
+    color: rgba(0, 0, 0, 0.25);
+    line-height: 1rem;
+  }
+
+  .van-button {
+    height: 62px;
+  }
 }
