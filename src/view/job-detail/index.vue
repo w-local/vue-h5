@@ -6,7 +6,7 @@
       <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
     </div>
     <div class="info-content">
-      <div class="info-data d-flex-bet">
+      <div class="info-data">
         <div class="info-name">点单日餐请串烧师傅，全工或半工，本人居留带 厨房热菜，有意者电话联系</div>
         <div class="d-flex-bet-cent">
           <div class="d-flex-i-cent">

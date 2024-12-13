@@ -60,6 +60,10 @@ export default [
     component: () => import('../view/local-chart/index.vue')
   },
   {
+    path: '/localChartDetail', //本地闲聊详情
+    component: () => import('../view/local-chart-detail/index.vue')
+  },
+  {
     path: '/news', //消息
     component: () => import('../view/news/index.vue')
   },
