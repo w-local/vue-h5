@@ -1,0 +1,132 @@
+.head-wrap {
+  height: 10.875rem;
+  padding: 3rem .625rem 0;
+  color: #fff;
+  background: url('@commonImg/head-bg.png') no-repeat 50% / cover;
+
+  .left-arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .head-name {
+    margin-left: calc(50% - 3rem);
+    font-weight: normal;
+    font-size: 1rem;
+    color: #FFFFFF;
+    line-height: 1.5rem;
+  }
+}
+
+
+.form-wrap {
+  width: 100%;
+  margin-top: -5.3125rem;
+  background: rgba(238, 242, 249, 1);
+}
+
+.form-item {
+  color: rgba(0, 0, 0, 0.65);
+  padding: .75rem 1rem;
+  background: #fff;
+
+  &:first-child {
+    border-bottom: .625rem solid rgba(238, 242, 249, 1);
+  }
+}
+
+.field {
+  position: relative;
+
+  .unit {
+    position: absolute;
+    top: .9375rem;
+    right: 1.25rem;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+  }
+}
+
+.form-type {
+  margin-left: 3.0625rem;
+
+  span {
+    display: inline-block;
+    width: 4.9375rem;
+    height: 2.1875rem;
+    margin-left: .5625rem;
+    font-size: .75rem;
+    text-align: center;
+    line-height: 2.1875rem;
+    color: rgba(0, 0, 0, 0.85);
+    border-radius: .25rem;
+    background: #F0F0F0;
+
+    &.active {
+      color: #FFFFFF;
+      background: #0089FF;
+    }
+  }
+}
+
+.required-icon {
+  width: .5rem;
+  height: .5rem;
+  margin: 0 4px 0 -10px;
+}
+
+.add-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.img-content {
+  height: 145px;
+  overflow-y: auto;
+}
+
+.img-item {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: .9375rem .98rem 0 0;
+  border-radius: .3125rem;
+
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+}
+
+.form-btn {
+  width: 100%;
+  padding: 2.5625rem 1rem 1.9375rem;
+}
+
+/deep/.van-field {
+  padding: .75rem 1rem;
+  font-size: 1rem;
+
+  .van-field__label,
+  .van-field__control:disabled {
+    color: rgba(0, 0, 0, 0.65) !important;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.65) !important;
+  }
+
+  #van-field-2-input {
+    width: 90%;
+  }
+
+  &::after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    transform: none;
+  }
+}
+
+/deep/.van-cell--borderless {
+  border-top: .625rem solid rgba(238, 242, 249, 1);
+  border-bottom: .625rem solid rgba(238, 242, 249, 1);
+
+  .van-field__control {
+    height: 4.5rem !important;
+  }
+}

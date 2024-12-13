@@ -34,6 +34,30 @@
     </div>
     <van-button round block @click="quitFun">退出登录</van-button>
   </div>
+  <div>
+    <div class="tabbar-wrap d-flex-bet-cent">
+      <div class="tabbar-item">
+        <img src="@homeImg/home-icon.png" />
+        <p>首页</p>
+      </div>
+      <div class="tabbar-item">
+        <img src="@homeImg/chat-icon.png" />
+        <p>闲聊</p>
+      </div>
+      <div class="tabbar-add">
+        <img src="@homeImg/tabbar-add.png" />
+      </div>
+      <div class="tabbar-item">
+        <img src="@homeImg/news-icon.png" />
+        <p>消息</p>
+      </div>
+      <div class="tabbar-item active">
+        <img src="@homeImg/my-active-icon.png" />
+        <p>我的</p>
+      </div>
+    </div>
+    <div class="round"></div>
+  </div>
 </template>
 
 <script setup lang="ts">

@@ -55,5 +55,39 @@ export default [
     path: '/agreement', //用户协议
     component: () => import('../view/agreement/index.vue')
   },
+  {
+    path: '/localChart', //本地闲聊
+    component: () => import('../view/local-chart/index.vue')
+  },
+  {
+    path: '/news', //消息
+    component: () => import('../view/news/index.vue')
+  },
+  {
+    path: '/car', //车辆
+    component: () => import('../view/car/index.vue')
+  },
+  {
+    path: '/carDetail', //车辆
+    component: () => import('../view/car-detail/index.vue')
+  },
+  {
+    path: '/publishCar', //车辆
+    component: () => import('../view/publish-car/index.vue')
+  },
+  {
+    path: '/publishHomestay', //发布民宿
+    component: () => import('../view/publish-homestay/index.vue')
+  },
+  {
+    path: '/homestayDetail', //发布民宿
+    component: () => import('../view/homestay-detail/index.vue')
+  },
+  {
+    path: '/homestay', //民宿
+    component: () => import('../view/homestay/index.vue')
+  },
+  
+  
 ]
 

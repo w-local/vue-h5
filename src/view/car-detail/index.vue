@@ -2,7 +2,7 @@
   <div class="detail-wrap">
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
-      <h1 class="head-name">商家详情</h1>
+      <h1 class="head-name">车辆详情</h1>
       <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
     </div>
     <van-swipe :autoplay="3000">
@@ -13,19 +13,22 @@
         <div class="custom-indicator">{{ active + 1 }}/{{ total }}</div>
       </template>
     </van-swipe>
-    <!-- <img class="banner-img" src="@detailImg/test-img.png" /> -->
     <div class="content-wrap">
-      <div class="info-data d-flex-bet">
-        <div class="d-flex-bet-cent">
-          <div class="info-name ellipsis-one">曼谷TKV</div>
-          <div class="info-location d-flex-i-cent">
-            <img class="location-icon" src="@commonImg/location-icon.png" />
-            <span>曼谷</span>
-          </div>
+      <div class="d-flex-bet-cent">
+          <div class="car-price">¥<span class="price-txt">4557</span></div>
+          <div class="car-modal">五座</div>
         </div>
-        <div class="info-region ellipsis-tow">24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…</div>
+      <div class="info-data d-flex-bet">
+       
+        <div class="info-name ellipsis-tow">【泰文司机包车】丰田通勤田通勤田田通勤田通勤田通勤田通通勤田通勤包车Toyota</div>
         <div class="d-flex-bet-cent">
-          <div class="info-type">休闲娱乐</div>
+          <div class="d-flex-i-cent">
+            <div class="score">4.6</div>
+            <div class="d-flex-i-cent pinglun">
+              <img class="icon-pinglun" alt="" src="@myImg/icon-pinglun.png" />
+              <span>5</span>
+            </div>
+          </div>
           <div>
             <img class="phone-icon" src="@commonImg/phone-icon.png" />
             <span class="info-phone">+6629876543</span>
@@ -34,10 +37,12 @@
       </div>
       <div class="introduce-content">
         <div class="d-flex-i-cent">
-          <img class="introduce-icon" src="@detailImg/introduce-icon.png" />
-          <span class="introduce-name">图片介绍</span>
+          <img class="introduce-icon" src="@detailImg/icon-che.png" />
+          <span class="introduce-name">车辆介绍</span>
         </div>
-        <img class="introduce-img" src="@detailImg/test-img1.png" />
+        <div class="introduce-txt" v-for="(item, idx) in detailData">
+          {{ item }}
+        </div>
       </div>
     </div>
   </div>
@@ -58,6 +63,7 @@ const onSelect = (option: any) => {
   alert(option.name)
   showShare.value = false
 }
+const detailData = ref(['周至少提前1天预订(提前24小时)', '用车全程司机中泰文服务，沟通顺畅，安心出行', '司机工作时长10小时/天(显谷市内、曼谷-外府)', '日包全包服务，费用已包含油费/高速费/停车费，不含 超时费/过'])
 </script>
 
 <style lang="less" scoped>

@@ -72,9 +72,6 @@
         </div>
         <img class="event-img" src="/src/assets/homeImg/banner.png" />
       </div>
-      <!-- <img class="event-img" src="@homeImg/event-img.png" />
-      <img class="event-img" src="@homeImg/event-img.png" />
-      <img class="event-img" src="@homeImg/event-img.png" /> -->
     </div>
   </div>
   <div>
