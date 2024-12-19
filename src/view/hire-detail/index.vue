@@ -19,7 +19,7 @@
   <div class="content-wrap">
     <img class="banner-img" src="@hireImg/banner-img.png" />
     <div>
-      <div class="info-item" v-for="(item, idx) in infoData" :key="idx">
+      <div class="info-item" v-for="(item, idx) in infoData" :key="idx"  @click="navigateTo('/jobDetail?id='+item.id)">
         <div class="info-name ellipsis-one">
           {{ item.name }}
         </div>
@@ -53,7 +53,12 @@
 import { ref } from 'vue'
 import useRouterNavigation from '@config/utils'
 import { areaData, supplyDemandData, workTypeData, natureData, infoData } from './data'
-const { navigateBack } = useRouterNavigation()
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const id = ref(route.query.id)
+console.log(id.value,'id')
+const {navigateTo, navigateBack } = useRouterNavigation()
 const value = ref('');
 const value1 = ref(0)
 const value2 = ref('a')

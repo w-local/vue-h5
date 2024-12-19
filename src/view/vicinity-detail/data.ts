@@ -11,6 +11,7 @@ export const typeData = [
 
 export const infoData = [
   {
+    id: '34',
     img: 'test',
     name: '曼谷餐厅',
     region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 4F,',
@@ -19,6 +20,7 @@ export const infoData = [
     phone: '+6234324324'
   },
   {
+    id: '34',
     img: 'test',
     name: '曼谷餐厅',
     region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',
@@ -27,6 +29,7 @@ export const infoData = [
     phone: '+6234324324'
   },
   {
+    id: '34',
     img: 'test',
     name: '曼谷餐厅',
     region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',
@@ -35,6 +38,7 @@ export const infoData = [
     phone: '+6234324324'
   },
   {
+    id: '34',
     img: 'test',
     name: '曼谷餐厅',
     region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',
@@ -43,6 +47,7 @@ export const infoData = [
     phone: '+6234324324'
   },
   {
+    id: '34',
     img: 'test',
     name: '曼谷餐厅',
     region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',

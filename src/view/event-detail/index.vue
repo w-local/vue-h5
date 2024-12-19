@@ -2,7 +2,7 @@
   <div class="detail-wrap">
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
-      <h1 class="head-name">闲聊详情</h1>
+      <h1 class="head-name">详情</h1>
       <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
     </div>
     <div class="content-wrap">
@@ -29,8 +29,8 @@
           </div>
         </div>
       </div>
-      <div class="content-title">友友们，颈椎有点扭伤了，两个多月了，吃药也 没好大家知道哪里能看吗？推荐下，谢谢！</div>
-      <div class="content-desc">友友们，颈椎有点扭伤了，两个多月了，吃药也 没好大家知道哪里能看吗？推荐下，谢谢！</div>
+      <div class="content-title">室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室室棋牌室</div>
+      <div class="content-desc">室棋牌室棋牌牌室棋牌室棋牌室棋牌室棋牌室室棋棋牌室棋牌室棋牌室棋牌室棋牌室棋牌棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室</div>
       <van-swipe :autoplay="3000">
         <van-swipe-item v-for="idx in 4" ::key="idx">
           <img class="banner-img" src="@detailImg/test-img.png" />

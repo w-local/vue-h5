@@ -91,7 +91,13 @@ export default [
     path: '/homestay', //民宿
     component: () => import('../view/homestay/index.vue')
   },
-  
-  
+  {
+    path: '/publishQuick', //快捷发布
+    component: () => import('../view/publish-quick/index.vue')
+  },
+  {
+    path: '/eventDetail', //事件详情
+    component: () => import('../view/event-detail/index.vue')
+  },
 ]
 

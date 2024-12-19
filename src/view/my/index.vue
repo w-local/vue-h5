@@ -17,7 +17,7 @@
     <div class="release-content">
       <div class="release-title">我的发布</div>
       <div class="release-list d-flex-bet-cent">
-        <div class="release-item" v-for="(item, idx) in releaseData" :key="idx">
+        <div class="release-item" v-for="(item, idx) in releaseData" :key="idx"  @click="navigateTo(item.url)">
           <img class="release-img" :src="getAssetsFile(`myImg/${item.icon}.png`)" />
           <div class="">{{ item.name }}</div>
         </div>
@@ -36,24 +36,24 @@
   </div>
   <div>
     <div class="tabbar-wrap d-flex-bet-cent">
-      <div class="tabbar-item">
+      <div class="tabbar-item" @click="navigateTo('/')">
         <img src="@homeImg/home-icon.png" />
         <p>首页</p>
       </div>
-      <div class="tabbar-item">
+      <div class="tabbar-item" @click="navigateTo('/localChart')">
         <img src="@homeImg/chat-icon.png" />
         <p>闲聊</p>
       </div>
-      <div class="tabbar-add">
+      <div class="tabbar-add" @click="navigateTo('/publishQuick')">
         <img src="@homeImg/tabbar-add.png" />
       </div>
-      <div class="tabbar-item">
+      <div class="tabbar-item" @click="navigateTo('/news')">
         <img src="@homeImg/news-icon.png" />
         <p>消息</p>
       </div>
-      <div class="tabbar-item active">
+      <div class="tabbar-item" @click="navigateTo('/my')">
         <img src="@homeImg/my-active-icon.png" />
-        <p>我的</p>
+        <p class="active">我的</p>
       </div>
     </div>
     <div class="round"></div>

@@ -53,6 +53,7 @@ export const typeData = [
 
 export const infoData = [
   {
+    id:'23',
     name: '点单日餐请串烧师傅，全工或半工，本人居留本人居留本人居留',
     workType:['全工','半工','串烧'],
     type: '招聘',
@@ -60,6 +61,7 @@ export const infoData = [
     phone: '+6234324324'
   },
   {
+    id:'23',
     name: '点单日餐请串烧师傅，全工或半工，本人居留本人居留本人居留',
     workType:['全工','半工','串烧'],
     type: '求职',

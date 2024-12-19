@@ -12,11 +12,12 @@
       <div>
         <img class="head-icon" src="@commonImg/icon-gongyu.png" />
         <div>公寓</div>
-        <div class="active"></div>
+        <div :class="type == '0' ? 'active' : ''"></div>
       </div>
       <div>
         <img class="head-icon" src="@commonImg/icon-bieshu.png" />
         <div>别墅</div>
+        <div :class="type == '1' ? 'active' : ''"></div>
       </div>
       <div @click="navigateTo('/publishCar')">
         <img class="head-icon" src="@commonImg/fbsj.png" />
@@ -88,7 +89,7 @@
     </van-dropdown-item>
   </van-dropdown-menu>
   <div class="homestay-list">
-    <div class="homestay-item d-flex" v-for="(item, idx) in dataData" :key="idx" @click="navigateTo('/homestayDetail')">
+    <div class="homestay-item d-flex" v-for="(item, idx) in dataData" :key="idx" @click="navigateTo(`/homestayDetail?id=${item.id}`)">
       <img class="homestay-img" :src="getAssetsFile(`vicinityImg/${item.img}.png`)" />
       <div class="homestay-info">
         <div class="info-name ellipsis-one">
@@ -118,13 +119,17 @@
 import { ref } from 'vue'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
 import { areaData, scoreData, homestayModalData, priceData, dataData, positionData } from './data'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const type = ref(route.query.type)
 const { navigateTo, navigateBack } = useRouterNavigation()
 const value1 = ref(0)
 const value = ref()
 const selectModalVal = ref<Array<number | null>>([])
 const selectPriceVal = ref<Array<number | null>>([])
 const selectPosAreaVal = ref(0)
-const selectPosVal  = ref(1)
+const selectPosVal = ref(1)
 const selectScoreVal = ref<number>(0)
 const priceRange = ref<any>([])
 

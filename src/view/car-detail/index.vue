@@ -52,6 +52,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const id = ref(route.query.id)
+console.log(id.value,'id')
 const { navigateBack } = useRouterNavigation()
 
 const showShare = ref(false)

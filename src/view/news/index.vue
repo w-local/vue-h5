@@ -11,9 +11,9 @@
     <van-swipe-cell v-for="(item, idx) in dataArr" :key="idx">
       <div class="d-flex-bet news-info">
         <div class="d-flex">
-          <div  class="news-img">
+          <div class="news-img">
             <img src="@detailImg/test-img.png" />
-            <div class="dot" :class="item.isNews&&'active'"></div>
+            <div class="dot" :class="item.isNews && 'active'"></div>
           </div>
           <div>
             <div class="d-flex">
@@ -33,22 +33,22 @@
   </div>
   <div>
     <div class="tabbar-wrap d-flex-bet-cent">
-      <div class="tabbar-item">
+      <div class="tabbar-item" @click="navigateTo('/')">
         <img src="@homeImg/home-icon.png" />
         <p>首页</p>
       </div>
-      <div class="tabbar-item">
+      <div class="tabbar-item" @click="navigateTo('/localChart')">
         <img src="@homeImg/chat-icon.png" />
         <p>闲聊</p>
       </div>
-      <div class="tabbar-add">
+      <div class="tabbar-add" @click="navigateTo('/publishQuick')">
         <img src="@homeImg/tabbar-add.png" />
       </div>
-      <div class="tabbar-item active">
+      <div class="tabbar-item" @click="navigateTo('/news')">
         <img src="@homeImg/news-active-icon.png" />
-        <p>消息</p>
+        <p class="active">消息</p>
       </div>
-      <div class="tabbar-item">
+      <div class="tabbar-item" @click="navigateTo('/my')">
         <img src="@homeImg/my-icon.png" />
         <p>我的</p>
       </div>
@@ -67,14 +67,14 @@ const dataArr = [
     name: '系统消息',
     txt: '嗨！在不在？',
     time: '14:09',
-    isNews: true,
+    isNews: true
   },
   {
     img: 'test-img',
     name: '福兴源家政',
     txt: '沟通方便，谢谢',
     time: '昨天',
-    isNews: true,
+    isNews: true
   },
   {
     img: 'test-img',

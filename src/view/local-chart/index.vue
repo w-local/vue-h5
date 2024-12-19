@@ -22,11 +22,10 @@
   <div class="publish-content">
     <van-tabs v-model:active="active">
       <van-tab v-for="(item, idx) in dataData" :key="idx" :title="item.name">
-        <div class="publish-item" v-for="(subItem, subIdx) in item.data" :key="subIdx">
+        <div class="publish-item" v-for="(subItem, subIdx) in item.data" :key="subIdx" @click="navigateTo(`/localChartDetail?id=${subItem.id}`)">
           <div :class="subItem.imgs.length > 1 ? '' : 'd-flex'">
             <div class="publish-title">{{ subItem.title }}</div>
             <img class="publish-img" :class="subItem.imgs.length > 1 ? 'more-img' : ''" v-for="(img, idx) in subItem.imgs" :key="idx" src="@myImg/test-img.png" />
-            <!-- </div> -->
           </div>
           <div class="d-flex-bet-cent publish-operate">
             <div class="d-flex-i-cent">
@@ -48,6 +47,30 @@
       </van-tab>
     </van-tabs>
   </div>
+  <div>
+    <div class="tabbar-wrap d-flex-bet-cent">
+      <div class="tabbar-item" @click="navigateTo('/')">
+        <img src="@homeImg/home-icon.png" />
+        <p>首页</p>
+      </div>
+      <div class="tabbar-item" @click="navigateTo('/localChart')">
+        <img src="@homeImg/chat-active-icon.png" />
+        <p class="active">闲聊</p>
+      </div>
+      <div class="tabbar-add" @click="navigateTo('/publishQuick')">
+        <img src="@homeImg/tabbar-add.png" />
+      </div>
+      <div class="tabbar-item" @click="navigateTo('/news')">
+        <img src="@homeImg/news-icon.png" />
+        <p>消息</p>
+      </div>
+      <div class="tabbar-item" @click="navigateTo('/my')">
+        <img src="@homeImg/my-icon.png" />
+        <p>我的</p>
+      </div>
+    </div>
+    <div class="round"></div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -61,6 +84,7 @@ const dataData = ref([
     name: '最新',
     data: [
       {
+        id:'11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [''],
         hot: 152,
@@ -69,6 +93,7 @@ const dataData = ref([
         time: '半个小时前'
       },
       {
+        id:'11',
         title: '各位街友好，谁知道Rebuplque陈医生上不上班？',
         imgs: [''],
         hot: 152,
@@ -77,6 +102,7 @@ const dataData = ref([
         time: '半个小时前'
       },
       {
+        id:'11',
         title: '11月09号周六徒步 Chateau de Chamarande城堡及公园',
         imgs: ['', '', ''],
         hot: 152,
@@ -90,6 +116,7 @@ const dataData = ref([
     name: '最热',
     data: [
       {
+        id:'11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [''],
         hot: 152,

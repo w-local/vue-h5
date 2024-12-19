@@ -28,7 +28,7 @@
   <div class="content-wrap">
     <img class="banner-img" src="@vicinityImg/banner-img.png" />
     <div>
-      <div class="info-item d-flex" v-for="(item, idx) in infoData" :key="idx">
+      <div class="info-item d-flex" v-for="(item, idx) in infoData" :key="idx"  @click="navigateTo('/merchantDetail?id='+item.id)">
         <img class="info-img" :src="getAssetsFile(`vicinityImg/${item.img}.png`)" />
         <div class="info-right">
           <div class="d-flex-bet-cent">
@@ -58,7 +58,7 @@
 import { ref } from 'vue'
 import useRouterNavigation,{ getAssetsFile } from '@config/utils'
 import { areaData, typeData, infoData } from './data'
-const { navigateBack } = useRouterNavigation()
+const {navigateTo, navigateBack } = useRouterNavigation()
 
 const value = ref('')
 const value1 = ref(0)

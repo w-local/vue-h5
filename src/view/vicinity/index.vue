@@ -38,7 +38,7 @@
     </div>
     <img class="banner-img" src="@vicinityImg/banner-img.png" />
     <div>
-      <div class="info-item d-flex" v-for="(item, idx) in infoData" :key="idx">
+      <div class="info-item d-flex" v-for="(item, idx) in infoData" :key="idx" @click="navigateTo('/merchantDetail?id='+item.id)" >
         <img class="info-img" :src="getAssetsFile(`vicinityImg/${item.img}.png`)" />
         <div class="info-right">
           <div class="d-flex-bet-cent">

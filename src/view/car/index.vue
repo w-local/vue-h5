@@ -12,11 +12,12 @@
       <div>
         <img class="head-icon" src="@commonImg/icon-cheliang.png" />
         <div>租车</div>
-        <div class="active"></div>
+        <div :class="type == '0' ? 'active' : ''"></div>
       </div>
       <div>
         <img class="head-icon" src="@commonImg/icon-maimai.png" />
         <div>买卖</div>
+        <div :class="type == '1' ? 'active' : ''"></div>
       </div>
       <div @click="navigateTo('/publishCar')">
         <img class="head-icon" src="@commonImg/fbsj.png" />
@@ -69,7 +70,7 @@
     </van-dropdown-item>
   </van-dropdown-menu>
   <div class="car-list">
-    <div class="car-item" v-for="(item, idx) in dataData" :key="idx" @click="navigateTo('/carDetail')">
+    <div class="car-item" v-for="(item, idx) in dataData" :key="idx" @click="navigateTo('/carDetail?id='+item.id)">
       <img class="car-img" :src="getAssetsFile(`detailImg/${item.img}.png`)" />
       <div class="car-info">
         <div class="car-title ellipsis-one">{{ item.title }}</div>
@@ -102,6 +103,10 @@
 import { ref } from 'vue'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
 import { priceData, carModalData, dataData } from './data'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const type = ref(route.query.type)
 const { navigateTo, navigateBack } = useRouterNavigation()
 const selectPriceVal = ref<Array<number | null>>([])
 const priceRange = ref<any>([])

@@ -43,9 +43,6 @@
           我的别墅在中天海边12巷，距离海边150米，位置非常好，内部配备了超大泳池，KTV，私人中文管家，当晚赠送一餐海鲜盛宴需要的请预约。
 我的别墅在中天海边12巷，距离海边150米，位置非常好，内部配备了超大泳池，KTV，私人中文管家，当晚赠送一餐海鲜盛宴需要的请预约。
         </div>
-        <!-- <div class="introduce-txt" v-for="(item, idx) in detailData">
-          {{ item }}
-        </div> -->
       </div>
     </div>
   </div>
@@ -55,6 +52,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const id = ref(route.query.id)
+console.log(id.value,'id')
+
+
 const { navigateBack } = useRouterNavigation()
 
 const showShare = ref(false)
@@ -66,7 +70,6 @@ const onSelect = (option: any) => {
   alert(option.name)
   showShare.value = false
 }
-const detailData = ref(['周至少提前1天预订(提前24小时)', '用车全程司机中泰文服务，沟通顺畅，安心出行', '司机工作时长10小时/天(显谷市内、曼谷-外府)', '日包全包服务，费用已包含油费/高速费/停车费，不含 超时费/过'])
 </script>
 
 <style lang="less" scoped>

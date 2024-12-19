@@ -2,34 +2,42 @@ export const releaseData = [
   {
     icon:'icon-xianliao',
     name:'闲聊',
+    url: '/localChart',
   },
   {
     icon:'icon-gongyu',
     name:'公寓',
+    url: '/homestay?type=0',
   },
   {
     icon:'icon-bieshu',
     name:'别墅',
+    url: '/homestay?type=1',
   },
   {
     icon:'icon-zuche',
     name:'租车',
+    url: '/car?type=0',
   },
   {
     icon:'icon-maimai',
     name:'买卖',
+    url: '/car?type=1',
   },
   {
     icon:'icon-zhaopin',
     name:'招聘',
+    url: '/hire',
   },
   {
     icon:'icon-ershou',
     name:'二手',
+    url: '/hire',
   },
   {
     icon:'icon-fujin',
     name:'附近',
+    url: '/vicinity',
   }
 ]
 

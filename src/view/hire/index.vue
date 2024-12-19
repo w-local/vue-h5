@@ -32,7 +32,7 @@
       <img class="info-icon" src="@commonImg/new-icon.png" />
       <span>最新</span>
     </div>
-      <div class="info-item" v-for="(item, idx) in infoData" :key="idx">
+      <div class="info-item" v-for="(item, idx) in infoData" :key="idx" @click="navigateTo('/jobDetail?id='+item.id)">
         <div class="info-name ellipsis-one">
           {{ item.name }}
         </div>

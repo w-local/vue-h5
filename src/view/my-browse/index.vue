@@ -11,7 +11,7 @@
     <van-tabs v-model:active="active">
       <van-tab v-for="(item, idx) in dataData" :key="idx" :title="item.name">
         <div class="publish-date">{{ item.date }}</div>
-        <div class="publish-item" v-for="(subItem, subIdx) in item.data" :key="subIdx">
+        <div class="publish-item" v-for="(subItem, subIdx) in item.data" :key="subIdx"  @click="linkFun(item.url,subItem.id)">
           <div :class="subItem.imgs.length > 1 ? '' : 'd-flex'">
             <div class="publish-title">{{ subItem.title }}</div>
             <!-- <div :class="subItem.imgs.length>1?'d-flex-bet-cent d-wrap':''"> -->
@@ -43,15 +43,22 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
-const { navigateBack } = useRouterNavigation()
+const {navigateTo, navigateBack } = useRouterNavigation()
 const active = ref(0)
+
+const linkFun=(url:string,id:string) =>{
+  const pathUrl = url.includes('?')?url+'&id='+id:url+'?id='+id
+  navigateTo(pathUrl)
+}
 
 const dataData = ref([
   {
     date:'11月19日',
     name: '闲聊',
+    url: '/localChart',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [''],
         hot: 152,
@@ -60,6 +67,7 @@ const dataData = ref([
         time: '半个小时前'
       },
       {
+        id: '11',
         title: '各位街友好，谁知道Rebuplque陈医生上不上班？',
         imgs: [''],
         hot: 152,
@@ -68,6 +76,7 @@ const dataData = ref([
         time: '半个小时前'
       },
       {
+        id: '11',
         title: '11月09号周六徒步 Chateau de Chamarande城堡及公园',
         imgs: ['', '', ''],
         hot: 152,
@@ -79,8 +88,10 @@ const dataData = ref([
   },
   {
     name: '公寓',
+    url: '/homestay?type=0',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [''],
         hot: 152,
@@ -92,8 +103,10 @@ const dataData = ref([
   },
   {
     name: '别墅',
+    url: '/homestay?type=1',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [],
         hot: 152,
@@ -105,8 +118,10 @@ const dataData = ref([
   },
   {
     name: '租车',
+    url: '/car?type=0',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [],
         hot: 152,
@@ -118,8 +133,10 @@ const dataData = ref([
   },
   {
     name: '买卖',
+    url: '/car?type=1',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [],
         hot: 152,
@@ -131,8 +148,10 @@ const dataData = ref([
   },
   {
     name: '招聘',
+    url: '/hire',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [],
         hot: 152,
@@ -144,8 +163,10 @@ const dataData = ref([
   },
   {
     name: '二手',
+    url: '/hire',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [],
         hot: 152,
@@ -157,8 +178,10 @@ const dataData = ref([
   },
   {
     name: '附近',
+    url: '/vicinity',
     data: [
       {
+        id: '11',
         title: '巴黎地铁6号线车顶“冲浪”， 两人被捕',
         imgs: [],
         hot: 152,
