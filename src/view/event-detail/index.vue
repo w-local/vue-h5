@@ -2,7 +2,7 @@
   <div class="detail-wrap">
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
-      <h1 class="head-name">详情</h1>
+      <h1 class="head-name">大事件详情</h1>
       <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
     </div>
     <div class="content-wrap">

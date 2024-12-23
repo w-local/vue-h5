@@ -57,7 +57,7 @@
       <div class="tab-item" v-for="(item, idx) in tabData" :key="idx">
         <p class="tab-name">{{ item.name }}</p>
         <p class="tab-num">{{ item.num }}家</p>
-        <p class="tab-btn" :style="{ background: `linear-gradient( 135deg, ${item.bg[0]} 0%, ${item.bg[1]}  100%)` }">去看看</p>
+        <p class="tab-btn" :style="{ background: `linear-gradient( 135deg, ${item.bg[0]} 0%, ${item.bg[1]}  100%)` }" @click="navigateTo(item.url)">去看看</p>
         <img class="tab-img" :src="getAssetsFile('homeImg/' + item.img + '.png')" />
       </div>
     </div>
@@ -112,6 +112,7 @@
 import { ref } from 'vue'
 import useRouterNavigation,{ getAssetsFile } from '@config/utils'
 import {tabData,typeData,bannerData} from './data'
+import { url } from 'inspector';
 const { navigateTo } = useRouterNavigation()
 const searchWrap = ref()
 const stickyFun = (isFixed: boolean) => {

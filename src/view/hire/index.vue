@@ -21,7 +21,7 @@
   </div>
   <div class="content-wrap">
     <div class="type-list d-flex-i-cent">
-      <div class="type-item" v-for="(item, idx) in typeData" :key="idx" :style="{ background: `${item.bg}` }" >
+      <div class="type-item" v-for="(item, idx) in typeData" :key="idx" :style="{ background: `${item.bg}` }" @click="navigateTo('/hireDetail?id='+item.id)" >
         <img class="type-img" :src="getAssetsFile(`hireImg/${item.icon}.png`)" />
         <div class="">{{ item.name }}</div>
       </div>

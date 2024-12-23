@@ -1,15 +1,18 @@
 export const typeData = [
   {
+    id:'11',
     icon: 'icon-baomu',
     name: '保姆',
     bg: 'linear-gradient( 180deg, #EF5852 0%, #FA8655 100%)'
   },
   {
+    id:'11',
     icon: 'icon-baojie',
     name: '保洁',
     bg: 'linear-gradient( 180deg, #4086F8 0%, #51AFF5 100%)'
   },
   {
+    id:'11',
     icon: 'icon-zhuangxiu',
     name: '装修',
     bg: 'linear-gradient( 180deg, #6580FB 0%, #68A4F2 100%)'
@@ -20,6 +23,7 @@ export const typeData = [
     bg: 'linear-gradient( 180deg, #32C3B5 0%, #58D5B1 100%)'
   },
   {
+    id:'11',
     icon: 'icon-fuwuyuan',
     name: '服务员',
     bg: 'linear-gradient(180deg, #FF8B3D 0%, #FDA545 100%)'
@@ -30,21 +34,25 @@ export const typeData = [
     bg: 'linear-gradient( 180deg, #EF5852 0%, #FA8655 100%)'
   },
   {
+    id:'11',
     icon: 'icon-canyin',
     name: '餐饮',
     bg: 'linear-gradient(180deg, #4086F8 0%, #51AFF5 100%)'
   },
   {
+    id:'11',
     icon: 'icon-gongchang',
     name: '工厂',
     bg: 'linear-gradient( 180deg, #6580FB 0%, #68A4F2 100%)'
   },
   {
+    id:'11',
     icon: 'icon-linshigong',
     name: '临时工',
     bg: 'linear-gradient( 180deg, #32C3B5 0%, #58D5B1 100%)'
   },
   {
+    id:'11',
     icon: 'icon-qita',
     name: '其他',
     bg: 'linear-gradient( 180deg, #FF8B3D 0%, #FDA545 100%)'

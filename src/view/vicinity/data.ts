@@ -11,36 +11,43 @@
 
 export const typeData = [
   {
+    id: '22',
     icon: 'icon-canting',
     name: '餐厅',
     bg: 'linear-gradient( 180deg, #EF5852 0%, #FA8655 100%)'
   },
   {
+    id: '22',
     icon: 'icon-jiuba',
     name: '酒吧',
     bg: 'linear-gradient( 180deg, #4086F8 0%, #51AFF5 100%)'
   },
   {
+    id: '22',
     icon: 'icon-ktv',
     name: 'KTV',
     bg: 'linear-gradient( 180deg, #32C3B5 0%, #58D5B1 100%)'
   },
   {
+    id: '22',
     icon: 'icon-spa',
     name: 'SPA',
     bg: 'linear-gradient( 180deg, #FF8B3D 0%, #FDA545 100%)'
   },
   {
+    id: '22',
     icon: 'icon-xiyu',
     name: '洗浴',
     bg: 'linear-gradient( 180deg, #EF5852 0%, #FA8655 100%)'
   },
   {
+    id: '22',
     icon: 'icon-lifa',
     name: '理发',
     bg: 'linear-gradient( 180deg, #4086F8 0%, #51AFF5 100%)'
   },
   {
+    id: '22',
     icon: 'icon-qita',
     name: '其他',
     bg: 'linear-gradient( 180deg, #32C3B5 0%, #58D5B1 100%)'

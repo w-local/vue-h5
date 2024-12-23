@@ -99,5 +99,16 @@ export default [
     path: '/eventDetail', //事件详情
     component: () => import('../view/event-detail/index.vue')
   },
+  {
+    path: '/currencyExchange', //货币兑换
+    component: () => import('../view/currency-exchange/index.vue')
+  },
+  {
+    path: '/merchantList', //商家列表
+    component: () => import('../view/merchant-list/index.vue')
+  },
 ]
+
+
+ 
 

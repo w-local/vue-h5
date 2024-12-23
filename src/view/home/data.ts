@@ -7,7 +7,7 @@ export const bannerData = [
   {
     icon: 'hbdh',
     name: '货币兑换',
-    url: '/localChart'
+    url: '/currencyExchange'
   },
   {
     icon: 'bdcx',
@@ -116,6 +116,7 @@ export const tabData = [
   {
     img: 'bdsj',
     name: '本地商家',
+    url: '/vicinity',
     num: 80,
     imgBg: '',
     bg: ['#FFAC4F', '#FF8533']
@@ -123,12 +124,14 @@ export const tabData = [
   {
     img: 'essp',
     name: '二手商品',
+    url: '/vicinity',
     num: 90,
     bg: ['#5CB7FA', '#2780F8']
   },
   {
     img: 'tb',
     name: '贴吧',
+    url: '/vicinity',
     num: 60,
     bg: ['#22D0C2', '#18B8A9']
   }

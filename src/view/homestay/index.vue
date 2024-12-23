@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="head-wrap">
     <div class="d-flex-bet-cent">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
@@ -113,6 +114,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script setup lang="ts">
