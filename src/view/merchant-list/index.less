@@ -1,44 +1,318 @@
 .detail-wrap {
+  height: 100vh;
+  background: #EEF2F9;
 
 
   .head-wrap {
-    height: 10.875rem;
-    margin-bottom: -5.5rem;
-    padding: 3rem .625rem 1.0625rem;
+    height: 174px;
+    margin-bottom: -88px;
+    padding: 48px 10px 17px;
     color: #fff;
     background: url('@commonImg/head-bg.png') no-repeat 50% / cover;
   }
 
   .left-arrow {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
   }
 
   .head-name {
-    margin-left: 3.5625rem;
+    margin-left: 57px;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 16px;
     color: #FFFFFF;
-    line-height: 1.5rem;
+    line-height: 24px;
   }
 
   .share-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-left: .9375rem;
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+  }
+}
+
+.info-wrap {
+  background: #fff;
+
+  .padding {
+    padding: 7px 10px 0;
+  }
+
+  .van-icon-play {
+    transform: rotate(90deg);
+  }
+
+  .info-position {
+    margin-right: 16px;
+    padding-right: 14px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 21px;
+    border-right: 1px solid #E2E2E2;
+  }
+
+  .info-currency {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 18px;
+  }
+
+  .currency-tip {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 16px;
+  }
+
+  .date-list {
+    margin: 11px 0 8px;
+    width: 88%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .date-item {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    padding: 9.44px 0;
+    margin-right: 3px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.85);
+    border-radius: 4px;
+    background: #F4F4F4;
+
+    &.active {
+      color: #FFFFFF;
+      background: #036EF2;
+    }
+  }
+
+  .date-num {
+    margin-bottom: 2px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .date-txt {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .date-tip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: .875rem;
+    height: .875rem;
+    font-size: 10px;
+    color: #FFFFFF;
+    border-radius: 4px 0 4px 0;
+    border: 1px solid #FFFFFF;
+    background: #E72008;
+  }
+
+  .icon-rili {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 2px;
+  }
+
+  .calendar {
+    width: 35px;
+    margin: 20px 0 0 10px;
+    text-align: center;
+    font-size: .625rem;
+    color: rgba(0, 0, 0, 0.84);
+  }
+
+
+}
+
+.dropdown-conetnt {
+  padding: 10px 15px 5px;
+
+  .dropdown-title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .modal-item {
+    position: relative;
+    width: 31%;
+    height: 32px;
+    margin: 0 .5rem .5rem 0;
+    line-height: 2.0625rem;
+    font-size: .8125rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.85);
+    background: #F8F8F8;
+    border-radius: .25rem;
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    &.active {
+      color: #0767F0;
+      background: #E7F3FF;
+    }
+  }
+
+}
+
+.btn-wrap {
+  padding: 10px 16px;
+  box-shadow: 0rem -0.125rem .25rem 0rem rgba(0, 0, 0, 0.08);
+
+  .van-button--plain {
+    width: 35%;
+    height: 2.75rem;
+    border-radius: .375rem;
+    border: .0625rem solid #A5A5A5;
+  }
+
+  .van-button--primary {
+    width: 62%;
+    height: 2.75rem;
+    background: #0089FF;
+    border-radius: .375rem;
   }
 }
 
 .content-wrap {
-  padding: .625rem .625rem;
-  background: #EEF2F9;
-  
-  .merchant-item{
-    margin-bottom: .5rem;
-    padding: .625rem .6875rem;
-border-radius: .5rem;
-background: #FFF;
+  padding: 10px 10px;
+
+  .merchant-item {
+    margin-bottom: 8px;
+    padding: 10px 11px;
+    border-radius: 8px;
+    background: #FFF;
   }
 
- 
+  .merchant-name {
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 24px;
+  }
+
+  .merchant-city {
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 18px;
+  }
+
+  .merchant-time {
+    margin: 2px 0 3px;
+    font-size: 12px;
+    color: #245192;
+  }
+
+  .merchant-ticket,
+  .merchant-exchange,
+  .merchant-urgent,
+  .merchant-ppurse {
+    padding: 3px;
+    font-size: 10px;
+    border-radius: 3px;
+  }
+
+  .merchant-ticket {
+    color: #FFFFFF;
+    border-radius: 3px;
+    background: #F85705;
+  }
+
+  .merchant-exchange {
+    margin: 0 3px;
+    color: #4A6885;
+    border: 1px solid #A8B3DB;
+    background: #E5EEF9;
+  }
+
+  .merchant-urgent {
+    color: #7F5E48;
+    border: 1px solid #D4B598;
+    background: #F8EFDC;
+  }
+
+  .merchant-ppurse {
+    margin-left: 3px;
+    color: #1F7EE1;
+    border: .0625rem solid #B0C1F5;
+  }
+
+  .day-free {
+    display: inline-block;
+    margin-top: 5.6px;
+    font-size: 12px;
+    color: #24B282;
+    line-height: 17px;
+  }
+
+  .refund-rule {
+    display: inline-block;
+    margin: 5.6px 0 0 9px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    line-height: 17px;
+  }
+
+  .discounted-price {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    color: #036EF2;
+    line-height: 24px;
+  }
+
+  .original-price {
+    font-weight: bold;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.25);
+    text-decoration: line-through;
+    text-align: right;
+    line-height: 17px;
+  }
+
+  .reservation {
+    width: 52px;
+    height: 52px;
+    margin-top: 2px;
+    text-align: center;
+    line-height: 52px;
+    font-size: 17px;
+    color: #FFFFFF;
+    border-radius: 4px;
+    background: #036EF2;
+  }
 }
+
+/deep/.van-dropdown-menu__bar {
+  height: 29.6px;
+  padding-right: .9375rem;
+  padding-bottom: .3125rem;
+
+  box-shadow: 0rem .125rem .25rem 0rem rgba(0, 0, 0, 0.08);
+
+  .van-dropdown-menu__title {
+    font-size: .8125rem;
+    line-height: 1.1875rem;
+
+    &::after {
+      border-color: transparent transparent #000 #333;
+    }
+  }
+
+  .van-dropdown-menu__title--active:after {
+    border-color: transparent transparent #036EF2 #036EF2;
+  }
+}
+
+// /* 滚动条轨道样式 */
+// ::-webkit-scrollbar {
+//   width: 0; /* 设置滚动条宽度 */
+// }

@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="head-wrap">
     <h1 class="head-name d-flex-cent-cent">我的</h1>
     <div class="d-flex-bet-cent">
@@ -58,6 +59,7 @@
     </div>
     <div class="round"></div>
   </div>
+</div>
 </template>
 
 <script setup lang="ts">

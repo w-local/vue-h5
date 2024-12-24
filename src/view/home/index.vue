@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="banner-wrap">
     <h1 class="banner-name">东南亚大事件</h1>
     <van-sticky @change="stickyFun">
@@ -106,17 +107,16 @@
     </div>
     <div class="round"></div>
   </div>
+</div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import useRouterNavigation,{ getAssetsFile } from '@config/utils'
 import {tabData,typeData,bannerData} from './data'
-import { url } from 'inspector';
 const { navigateTo } = useRouterNavigation()
 const searchWrap = ref()
 const stickyFun = (isFixed: boolean) => {
-  console.log(isFixed, 'isFixed')
   searchWrap.value.style.backgroundColor = isFixed ? 'rgb(64, 134, 248)' : 'transparent'
 }
 </script>

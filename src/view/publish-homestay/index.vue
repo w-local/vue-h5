@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="head-wrap d-flex">
     <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
     <h1 class="head-name">发布民宿</h1>
@@ -37,6 +38,7 @@
   <van-popup v-model:show="showPicker" round position="bottom">
     <van-picker :columns="columns" @cancel="showPicker = false" @confirm="onConfirm" />
   </van-popup>
+</div>
 </template>
 
 <script setup lang="ts">

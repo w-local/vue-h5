@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="head-wrap">
     <div class="d-flex-i-cent">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
@@ -23,12 +24,6 @@
       <div class="search-btn">搜索</div>
     </div>
   </div>
-
-  <!-- <van-dropdown-menu>
-    <van-dropdown-item v-model="value1" :options="areaData" />
-    <van-dropdown-item v-model="value2" :options="typeData" />
-  </van-dropdown-menu> -->
-
   <div class="content-wrap">
     <div class="type-list d-flex-i-cent">
       <div class="type-item" v-for="(item, idx) in typeData" :key="idx" :style="{ background: `${item.bg}` }" @click="navigateTo('/vicinityDetail?id='+item.id)">
@@ -62,6 +57,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script setup lang="ts">

@@ -1,17 +1,19 @@
 <template>
-<div class="d-flex-around-cent quick-list">
-  <div class="quick-item" v-for="(item,idx) in data" :key="idx" @click="navigateTo(item.url)">
-    <img :src="getAssetsFile(`homeImg/${item.icon}.png`)" />
-    <div>{{ item.name }}</div>
+  <div>
+  <div class="d-flex-around-cent quick-list">
+    <div class="quick-item" v-for="(item, idx) in data" :key="idx" @click="navigateTo(item.url)">
+      <img :src="getAssetsFile(`homeImg/${item.icon}.png`)" />
+      <div>{{ item.name }}</div>
+    </div>
+    <van-icon color="#999" size="32" name="close" @click="navigateBack()" />
   </div>
-<van-icon color="#999" size="32" name="close" @click="navigateBack()" />
+  <img class="quick-img" src="@homeImg/quick-img.png" />
 </div>
-<img class="quick-img" src="@homeImg/quick-img.png" />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import {data} from './data'
+import { data } from './data'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
 
 const { navigateTo, navigateBack } = useRouterNavigation()

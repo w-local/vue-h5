@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="detail-wrap">
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
@@ -115,6 +116,7 @@
     </div>
   </div>
   <van-share-sheet v-model:show="showShare" :options="options" @select="onSelect" />
+</div>
 </template>
 
 <script setup lang="ts">

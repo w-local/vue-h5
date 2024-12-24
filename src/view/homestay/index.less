@@ -363,12 +363,15 @@
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
 
   .van-dropdown-menu__title {
-    font-size: 13px;
-    color: #333333;
-    line-height: 19px;
+    font-size: .8125rem;
+    line-height: 1.1875rem;
 
     &::after {
       border-color: transparent transparent #000 #333;
     }
+  }
+
+  .van-dropdown-menu__title--active:after {
+    border-color: transparent transparent #036EF2 #036EF2;
   }
 }

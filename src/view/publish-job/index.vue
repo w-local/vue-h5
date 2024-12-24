@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="head-wrap d-flex">
     <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
     <h1 class="head-name">发布职位</h1>
@@ -22,6 +23,7 @@
       <van-button type="primary" round block>发布</van-button>
     </div>
   </div>
+</div>
 </template>
 
 <script setup lang="ts">

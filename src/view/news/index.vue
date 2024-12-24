@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="head-wrap">
     <h1 class="head-name d-flex-cent-cent">消息</h1>
   </div>
@@ -55,6 +56,7 @@
     </div>
     <div class="round"></div>
   </div>
+</div>
 </template>
 
 <script setup lang="ts">

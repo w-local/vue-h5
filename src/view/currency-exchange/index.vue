@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="detail-wrap">
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
@@ -62,6 +63,7 @@
   <van-popup v-model:show="showDatePicker" destroy-on-close round position="bottom">
     <van-date-picker v-model="currentDate" title="选择日期" :columns-type="['month', 'day']" @confirm="onConfirmDate" />
   </van-popup>
+</div>
 </template>
 
 <script setup lang="ts">

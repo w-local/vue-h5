@@ -1,4 +1,5 @@
 <template>
+   <div>
   <div class="head-wrap d-flex-bet">
     <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
     <h1 class="head-name">浏览记录</h1>
@@ -38,6 +39,7 @@
       </van-tab>
     </van-tabs>
   </div>
+</div>
 </template>
 
 <script setup lang="ts">
