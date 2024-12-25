@@ -1,5 +1,6 @@
 <template>
   <div>
+    <van-sticky>
     <div class="head-wrap">
       <div class="d-flex-bet-cent">
         <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
@@ -89,6 +90,7 @@
         </div>
       </van-dropdown-item>
     </van-dropdown-menu>
+    </van-sticky>
     <div class="homestay-list">
       <div class="homestay-item d-flex" v-for="(item, idx) in dataData" :key="idx" @click="navigateTo(`/homestayDetail?id=${item.id}`)">
         <img class="homestay-img" :src="getAssetsFile(`vicinityImg/${item.img}.png`)" />

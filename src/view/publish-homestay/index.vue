@@ -1,9 +1,11 @@
 <template>
   <div>
+    <van-sticky>
   <div class="head-wrap d-flex">
     <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
     <h1 class="head-name">发布民宿</h1>
   </div>
+</van-sticky>
   <div class="form-wrap">
     <div class="form-item d-flex-i-cent">
       <span>民宿</span>

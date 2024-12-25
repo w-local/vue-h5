@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="detail-wrap">
+      <van-sticky>
       <div class="head-wrap d-flex-bet">
         <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
         <h1 class="head-name">闲聊详情</h1>
         <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
       </div>
+    </van-sticky>
       <div class="content-wrap">
         <div class="d-flex-bet-end">
           <div class="d-flex-i-cent">

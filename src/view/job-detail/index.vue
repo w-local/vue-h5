@@ -1,11 +1,13 @@
 <template>
   <div>
   <div class="detail-wrap">
+    <van-sticky>
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
       <h1 class="head-name">职位详情</h1>
       <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
     </div>
+  </van-sticky>
     <div class="info-content">
       <div class="info-data">
         <div class="info-name">点单日餐请串烧师傅，全工或半工，本人居留带 厨房热菜，有意者电话联系</div>

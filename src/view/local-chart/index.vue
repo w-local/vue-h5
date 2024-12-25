@@ -1,52 +1,53 @@
 <template>
   <div>
-    <div class="head-wrap">
-      <div class="d-flex-bet-cent">
-        <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
-        <h1 class="head-name">本地闲聊</h1>
-        <div class="d-flex-i-cent switch-content ellipsis-one">
-          <img class="switch-icon" src="@commonImg/dizhi-icon.png" />
-          <span class="switch-text">切换城市</span>
+    <van-sticky>
+      <div class="head-wrap">
+        <div class="d-flex-bet-cent">
+          <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
+          <h1 class="head-name">本地闲聊</h1>
+          <div class="d-flex-i-cent switch-content ellipsis-one">
+            <img class="switch-icon" src="@commonImg/dizhi-icon.png" />
+            <span class="switch-text">切换城市</span>
+          </div>
+        </div>
+        <div class="head-list d-flex-bet-cent">
+          <div @click="navigateTo('/publishJob')">
+            <img class="head-icon" src="@commonImg/fbsj.png" />
+            <div>发布闲聊</div>
+          </div>
+          <div>
+            <img class="head-icon" src="@commonImg/lxkf.png" />
+            <div>联系客服</div>
+          </div>
         </div>
       </div>
-      <div class="head-list d-flex-bet-cent">
-        <div @click="navigateTo('/publishJob')">
-          <img class="head-icon" src="@commonImg/fbsj.png" />
-          <div>发布闲聊</div>
-        </div>
-        <div>
-          <img class="head-icon" src="@commonImg/lxkf.png" />
-          <div>联系客服</div>
-        </div>
-      </div>
-    </div>
-    <div class="publish-content">
       <van-tabs v-model:active="active">
-        <van-tab v-for="(item, idx) in dataData" :key="idx" :title="item.name">
-          <div class="publish-item" v-for="(subItem, subIdx) in item.data" :key="subIdx" @click="navigateTo(`/localChartDetail?id=${subItem.id}`)">
-            <div :class="subItem.imgs.length > 1 ? '' : 'd-flex'">
-              <div class="publish-title">{{ subItem.title }}</div>
-              <img class="publish-img" :class="subItem.imgs.length > 1 ? 'more-img' : ''" v-for="(img, idx) in subItem.imgs" :key="idx" src="@myImg/test-img.png" />
+        <van-tab v-for="(item, idx) in dataData" :key="idx" :title="item.name"></van-tab>
+      </van-tabs>
+    </van-sticky>
+    <div class="publish-content">
+      <div class="publish-item" v-for="(subItem, subIdx) in dataData[active].data" :key="subIdx" @click="navigateTo(`/localChartDetail?id=${subItem.id}`)">
+        <div :class="subItem.imgs.length > 1 ? '' : 'd-flex'">
+          <div class="publish-title">{{ subItem.title }}</div>
+          <img class="publish-img" :class="subItem.imgs.length > 1 ? 'more-img' : ''" v-for="(img, idx) in subItem.imgs" :key="idx" src="@myImg/test-img.png" />
+        </div>
+        <div class="d-flex-bet-cent publish-operate">
+          <div class="d-flex-i-cent">
+            <span class="publish-txt publish-nickname ellipsis-one">{{ subItem.nickname }}</span>
+            <span class="publish-txt">{{ subItem.time }} 发布</span>
+          </div>
+          <div class="d-flex-i-cent">
+            <div class="d-flex-i-cent">
+              <img class="publish-icon hot-icon" src="@myImg/icon-huo.png" />
+              <span class="publish-num">152</span>
             </div>
-            <div class="d-flex-bet-cent publish-operate">
-              <div class="d-flex-i-cent">
-                <span class="publish-txt publish-nickname ellipsis-one">{{ subItem.nickname }}</span>
-                <span class="publish-txt">{{ subItem.time }} 发布</span>
-              </div>
-              <div class="d-flex-i-cent">
-                <div class="d-flex-i-cent">
-                  <img class="publish-icon hot-icon" src="@myImg/icon-huo.png" />
-                  <span class="publish-num">152</span>
-                </div>
-                <div class="d-flex-i-cent">
-                  <img class="publish-icon" src="@myImg/icon-pinglun.png" />
-                  <span class="publish-num">5</span>
-                </div>
-              </div>
+            <div class="d-flex-i-cent">
+              <img class="publish-icon" src="@myImg/icon-pinglun.png" />
+              <span class="publish-num">5</span>
             </div>
           </div>
-        </van-tab>
-      </van-tabs>
+        </div>
+      </div>
     </div>
     <div>
       <div class="tabbar-wrap d-flex-bet-cent">

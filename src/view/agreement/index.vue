@@ -1,9 +1,11 @@
 <template>
   <div>
+    <van-sticky>
     <div class="head-wrap d-flex">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
       <h1 class="head-name">用户协议</h1>
     </div>
+  </van-sticky>
     <div class="content">
       <h2 class="content-name">APP用户服务协议</h2>
       <div class="content-time">

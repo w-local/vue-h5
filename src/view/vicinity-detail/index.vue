@@ -1,31 +1,31 @@
 <template>
   <div>
-    <div class="head-wrap">
-      <div class="d-flex-i-cent">
-        <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack" />
-        <h1 class="head-name">附近</h1>
-      </div>
-      <div class="head-list d-flex-bet-cent">
-        <div>
-          <img class="head-icon" src="@commonImg/fbsj.png" />
-          <div>发布商家</div>
+    <van-sticky>
+      <div class="head-wrap">
+        <div class="d-flex-i-cent">
+          <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack" />
+          <h1 class="head-name">附近</h1>
         </div>
-        <div>
-          <img class="head-icon" src="@commonImg/lxkf.png" />
-          <div>联系客服</div>
+        <div class="head-list d-flex-bet-cent">
+          <div @click="navigateTo('/publishMerchant')">
+            <img class="head-icon" src="@commonImg/fbsj.png" />
+            <div>发布商家</div>
+          </div>
+          <div>
+            <img class="head-icon" src="@commonImg/lxkf.png" />
+            <div>联系客服</div>
+          </div>
+        </div>
+        <div class="head-search d-flex-bet-cent">
+          <van-search v-model="value" placeholder="搜索关键词" />
+          <div class="search-btn">搜索</div>
         </div>
       </div>
-      <div class="head-search d-flex-bet-cent">
-        <van-search v-model="value" placeholder="搜索关键词" />
-        <div class="search-btn">搜索</div>
-      </div>
-    </div>
-
-    <van-dropdown-menu>
-      <van-dropdown-item v-model="value1" :options="areaData" />
-      <van-dropdown-item v-model="value2" :options="typeData" />
-    </van-dropdown-menu>
-
+      <van-dropdown-menu>
+        <van-dropdown-item v-model="value1" :options="areaData" />
+        <van-dropdown-item v-model="value2" :options="typeData" />
+      </van-dropdown-menu>
+    </van-sticky>
     <div class="content-wrap">
       <img class="banner-img" src="@vicinityImg/banner-img.png" />
       <div>

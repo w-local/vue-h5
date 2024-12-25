@@ -1,6 +1,7 @@
 <template>
   <div>
   <div class="detail-wrap">
+    <van-sticky>
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
       <h1 class="head-name">商家列表</h1>
@@ -82,6 +83,7 @@
         </van-dropdown-item>
       </van-dropdown-menu>
     </div>
+    </van-sticky>
     <div class="content-wrap">
       <div class="merchant-list">
         <div class="merchant-item d-flex-bet" v-for="(item, idx) in data" :key="idx">

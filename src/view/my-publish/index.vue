@@ -1,5 +1,6 @@
 <template>
   <div>
+    <van-sticky>
   <div class="head-wrap d-flex-bet">
     <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
     <h1 class="head-name">我的发布</h1>
@@ -8,10 +9,13 @@
       <span class="head-txt">快捷发布</span>
     </div>
   </div>
-  <div class="publish-content">
-    <van-tabs v-model:active="active">
+  <van-tabs v-model:active="active">
       <van-tab v-for="(item, idx) in dataData" :key="idx" :title="item.name">
-        <div class="publish-item" v-for="(subItem, subIdx) in item.data" :key="subIdx">
+      </van-tab>
+    </van-tabs>
+</van-sticky>
+  <div class="publish-content">
+    <div class="publish-item" v-for="(subItem, subIdx) in dataData[active].data" :key="subIdx">
           <div :class="subItem.imgs.length>1?'':'d-flex'">
             <div class="publish-title">{{ subItem.title }}</div>
             <!-- <div :class="subItem.imgs.length>1?'d-flex-bet-cent d-wrap':''"> -->
@@ -35,8 +39,6 @@
             </div>
           </div>
         </div>
-      </van-tab>
-    </van-tabs>
   </div>
 </div>
 </template>

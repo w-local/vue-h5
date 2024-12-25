@@ -1,11 +1,13 @@
 <template>
   <div>
   <div class="detail-wrap">
+    <van-sticky>
     <div class="head-wrap d-flex-bet">
       <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
       <h1 class="head-name">车辆详情</h1>
       <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
     </div>
+  </van-sticky>
     <van-swipe :autoplay="3000">
       <van-swipe-item v-for="idx in 4" ::key="idx">
         <img class="banner-img" src="@detailImg/test-img.png" />

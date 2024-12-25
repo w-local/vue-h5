@@ -1,69 +1,71 @@
 <template>
   <div>
-  <div class="detail-wrap">
-    <div class="head-wrap d-flex-bet">
-      <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
-      <h1 class="head-name">货币兑换</h1>
-      <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
-    </div>
-    <div class="content-wrap">
-      <div class="d-flex currency-content">
-        <div>
-          <div class="currency">{{ fieldValue1.value }}</div>
-          <div class="d-flex-i-cent" @click="changeCurrency(0)">
-            <span class="currency-txt">{{ fieldValue1.text }}</span>
-            <van-icon size="10" name="play" />
-          </div>
-          <van-field v-model="value" type="number" />
-          <div class="d-flex-i-cent" @click="showAreaPicker = true">
-            <span class="currency-txt">{{ fieldValueArea.text }}</span>
-            <van-icon size="10" name="play" />
-          </div>
+    <div class="detail-wrap">
+      <van-sticky>
+        <div class="head-wrap d-flex-bet">
+          <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
+          <h1 class="head-name">货币兑换</h1>
+          <img class="share-icon" @click="showShare = true" src="@detailImg/fenxiang.png" />
         </div>
-        <div>
-          <div class="currency">{{ fieldValue2.value }}</div>
-          <div class="d-flex-i-cent" @click="changeCurrency(1)">
-            <span class="currency-txt">{{ fieldValue2.text }}</span>
-            <van-icon size="10" name="play" />
-          </div>
-          <van-field v-model="value" type="number" />
-          <div class="d-flex-i-cent" @click="showDatePicker = true">
-            <div class="currency-txt">
-              <span>{{ fieldValueDate[0] }}月{{ fieldValueDate[1] }}日</span>
-              <span class="date">今天</span>
+      </van-sticky>
+      <div class="content-wrap">
+        <div class="d-flex currency-content">
+          <div>
+            <div class="currency">{{ fieldValue1.value }}</div>
+            <div class="d-flex-i-cent" @click="changeCurrency(0)">
+              <span class="currency-txt">{{ fieldValue1.text }}</span>
+              <van-icon size="10" name="play" />
             </div>
-            <van-icon size="10" name="play" />
+            <van-field v-model="value" type="number" />
+            <div class="d-flex-i-cent" @click="showAreaPicker = true">
+              <span class="currency-txt">{{ fieldValueArea.text }}</span>
+              <van-icon size="10" name="play" />
+            </div>
+          </div>
+          <div>
+            <div class="currency">{{ fieldValue2.value }}</div>
+            <div class="d-flex-i-cent" @click="changeCurrency(1)">
+              <span class="currency-txt">{{ fieldValue2.text }}</span>
+              <van-icon size="10" name="play" />
+            </div>
+            <van-field v-model="value" type="number" />
+            <div class="d-flex-i-cent" @click="showDatePicker = true">
+              <div class="currency-txt">
+                <span>{{ fieldValueDate[0] }}月{{ fieldValueDate[1] }}日</span>
+                <span class="date">今天</span>
+              </div>
+              <van-icon size="10" name="play" />
+            </div>
           </div>
         </div>
-      </div>
-      <van-button type="primary" block round @click="navigateTo('/merchantList')">查看商家</van-button>
-      <div class="calculator-content">
-        <div class="calculator-head" @click="changeShow">
-          <img class="arrow-bottom" src="@currencyImg/icon.png" />
-        </div>
-        <div v-show="showCurrency" class="d-flex-bet-cent d-wrap calculator">
-          <div class="d-flex-cent-cent calculator-img" v-for="(item, idx) in currencyData" :key="idx">
-            <img :style="{marginTop:idx==14?'78px':'0'}" :src="getAssetsFile(`currencyImg/${item}.png`)" />
+        <van-button type="primary" block round @click="navigateTo('/merchantList')">查看商家</van-button>
+        <div class="calculator-content">
+          <div class="calculator-head" @click="changeShow">
+            <img class="arrow-bottom" src="@currencyImg/icon.png" />
           </div>
-           <div class="calculator-img"></div>
+          <div v-show="showCurrency" class="d-flex-bet-cent d-wrap calculator">
+            <div class="d-flex-cent-cent calculator-img" v-for="(item, idx) in currencyData" :key="idx">
+              <img :style="{ marginTop: idx == 14 ? '78px' : '0' }" :src="getAssetsFile(`currencyImg/${item}.png`)" />
+            </div>
+            <div class="calculator-img"></div>
+          </div>
         </div>
       </div>
     </div>
+    <van-share-sheet v-model:show="showShare" :options="options" @select="onSelect" />
+    <!-- 货币选择 -->
+    <van-popup v-model:show="showPicker" destroy-on-close round position="bottom">
+      <van-picker v-model="currentCurrency" :columns="columns" @cancel="showPicker = false" @confirm="onConfirm" />
+    </van-popup>
+    <!-- 地区选择 -->
+    <van-popup v-model:show="showAreaPicker" destroy-on-close round position="bottom">
+      <van-picker v-model="currentArea" :columns="areaColumns" @cancel="showPicker = false" @confirm="onConfirmArea" />
+    </van-popup>
+    <!-- 日期选择 -->
+    <van-popup v-model:show="showDatePicker" destroy-on-close round position="bottom">
+      <van-date-picker v-model="currentDate" title="选择日期" :columns-type="['month', 'day']" @confirm="onConfirmDate" />
+    </van-popup>
   </div>
-  <van-share-sheet v-model:show="showShare" :options="options" @select="onSelect" />
-  <!-- 货币选择 -->
-  <van-popup v-model:show="showPicker" destroy-on-close round position="bottom">
-    <van-picker v-model="currentCurrency" :columns="columns" @cancel="showPicker = false" @confirm="onConfirm" />
-  </van-popup>
-  <!-- 地区选择 -->
-  <van-popup v-model:show="showAreaPicker" destroy-on-close round position="bottom">
-    <van-picker v-model="currentArea" :columns="areaColumns" @cancel="showPicker = false" @confirm="onConfirmArea" />
-  </van-popup>
-  <!-- 日期选择 -->
-  <van-popup v-model:show="showDatePicker" destroy-on-close round position="bottom">
-    <van-date-picker v-model="currentDate" title="选择日期" :columns-type="['month', 'day']" @confirm="onConfirmDate" />
-  </van-popup>
-</div>
 </template>
 
 <script setup lang="ts">
@@ -80,8 +82,8 @@ const value = ref(0)
 
 const currencyData = ref(['7', '8', '9', 'jia', 'qingchu', '4', '5', '6', 'jian', 'c', '1', '2', '3', 'cheng', 'dengyu', '00', '0', 'dian', 'chu'])
 
-const showCurrency= ref(false)
-const changeShow=()=>{
+const showCurrency = ref(false)
+const changeShow = () => {
   showCurrency.value = !showCurrency.value
 }
 
