@@ -1,15 +1,24 @@
 export default [
   {
     path: '/',
-    component: () => import('../view/home/index.vue')
+    component: () => import('../view/home/index.vue'),
+    meta: {
+      index: 1
+    }
   },
   {
     path: '/vicinityDetail',//附近详情
-    component: () => import('../view/vicinity-detail/index.vue')
+    component: () => import('../view/vicinity-detail/index.vue'),
+    meta: {
+      index: 3
+    }
   },
   {
     path: '/vicinity', //附近
-    component: () => import('../view/vicinity/index.vue')
+    component: () => import('../view/vicinity/index.vue'),
+    meta: {
+      index: 2
+    }
   },
   {
     path: '/publishMerchant', //发布商家
@@ -37,7 +46,10 @@ export default [
   },
   {
     path: '/my', //我的
-    component: () => import('../view/my/index.vue')
+    component: () => import('../view/my/index.vue'),
+    meta: {
+      index: 2
+    }
   },
   {
     path: '/myPublish', //我的发布
@@ -57,7 +69,10 @@ export default [
   },
   {
     path: '/localChart', //本地闲聊
-    component: () => import('../view/local-chart/index.vue')
+    component: () => import('../view/local-chart/index.vue'),
+    meta: {
+      index: 2
+    }
   },
   {
     path: '/localChartDetail', //本地闲聊详情
@@ -65,7 +80,10 @@ export default [
   },
   {
     path: '/news', //消息
-    component: () => import('../view/news/index.vue')
+    component: () => import('../view/news/index.vue'),
+    meta: {
+      index: 2
+    }
   },
   {
     path: '/car', //车辆
