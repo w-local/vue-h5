@@ -105,7 +105,7 @@
             <img class="comment-img" src="@detailImg/icon-biaoqing.png" />
           </div>
         </div>
-        <div class="quick-reply d-flex-i-cent" style="display: none">
+        <div class="quick-reply d-flex-i-cent" >
           <span>快捷回复：</span>
           <div class="quick-list d-flex">
             <span class="quick-item">又劝我花钱</span>

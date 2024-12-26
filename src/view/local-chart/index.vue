@@ -11,9 +11,10 @@
           </div>
         </div>
         <div class="head-list d-flex-bet-cent">
-          <div @click="navigateTo('/publishJob')">
+          <div>
             <img class="head-icon" src="@commonImg/fbsj.png" />
             <div>发布闲聊</div>
+            <div class="active"></div>
           </div>
           <div>
             <img class="head-icon" src="@commonImg/lxkf.png" />

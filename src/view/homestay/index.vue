@@ -21,7 +21,7 @@
           <div>别墅</div>
           <div :class="type == '1' ? 'active' : ''"></div>
         </div>
-        <div @click="navigateTo('/publishCar')">
+        <div @click="navigateTo('/publishHomestay')">
           <img class="head-icon" src="@commonImg/fbsj.png" />
           <div>发布</div>
         </div>
