@@ -2,9 +2,9 @@
   height: 5.5625rem;
   padding: 3rem .625rem 0;
   color: #fff;
-  background: url('@commonImg/head-bg1.png') no-repeat;
-  background-position: center top;
-  background-size: 100% 155%;
+  background: url('@commonImg/head-bg1.png')  no-repeat ;
+    background-position: center top;
+    background-size: 100% 155%;
 
   .left-arrow {
     width: 1.5rem;
@@ -30,47 +30,45 @@
   color: rgba(0, 0, 0, 0.65);
   padding: .75rem 1rem;
   background: #fff;
-
-  &:first-child {
-    border-bottom: .625rem solid rgba(238, 242, 249, 1);
-  }
 }
 
 
-.form-type {
-  margin-left: 3.0625rem;
-
-  span {
-    display: inline-block;
-    width: 4.9375rem;
-    height: 2.1875rem;
-    margin-left: .5625rem;
-    font-size: .75rem;
-    text-align: center;
-    line-height: 2.1875rem;
-    color: rgba(0, 0, 0, 0.85);
-    border-radius: .25rem;
-    background: #F0F0F0;
-
-    &.active {
-      color: #FFFFFF;
-      background: #0089FF;
-    }
+  .unit {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.65);
   }
-}
 
-.unit {
+
+.area {
+  position: relative;
+  display: inline-flex;
+  // width: 11.25rem;
+  height: 2.25rem;
+  padding: 0 1.1875rem 0 .75rem;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.65);
+  color: rgba(0, 0, 0, 0.25);
+  background: #F7F7F7;
+  border-radius: 1.125rem;
+
+
+  .area-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .area-arrow {
+    width: .625rem;
+    height: .625rem;
+  }
+
+  .area-name {
+    display: inline-block;
+    margin: 0 .9375rem 0 .5rem;
+  }
 }
 
 
 
-.required-icon {
-  width: .5rem;
-  height: .5rem;
-  margin: 0 4px 0 -10px;
-}
 
 .add-icon {
   width: 1.5rem;
@@ -113,6 +111,8 @@
   }
 
   &::after {
+    top: 0;
+    bottom: auto;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     transform: none;
   }

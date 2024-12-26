@@ -84,12 +84,12 @@ export const typeData = [
       {
         name: '出售',
         icon: 'icon-chushou',
-        url: '/job'
+        url: '/secondHand'
       },
       {
         name: '求购',
         icon: 'icon-qiugou',
-        url: '/job'
+        url: '/secondHand'
       }
     ]
   },
