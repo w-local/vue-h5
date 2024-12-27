@@ -124,7 +124,7 @@ export const tabData = [
   {
     img: 'essp',
     name: '二手商品',
-    url: '/vicinity',
+    url: '/secondHand',
     num: 90,
     bg: ['#5CB7FA', '#2780F8']
   },
