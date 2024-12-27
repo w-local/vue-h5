@@ -29,7 +29,7 @@
           <div class="">{{ item.name }}</div>
         </div>
       </div>
-      <img class="banner-img" src="@secondImg/banner-img.png" />
+      <img class="banner-img" src="@secondImg/banner-img1.png" />
       <div>
         <div class="d-flex-i-cent info-title">
           <img class="info-icon" src="@commonImg/new-icon.png" />
