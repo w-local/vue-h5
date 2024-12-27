@@ -21,7 +21,8 @@ let router = createRouter({
     }
   }
 });
-// router = transitionExtend(router)
+router = transitionExtend(router)
+
  
 // 对router对象扩展
 export default router;
