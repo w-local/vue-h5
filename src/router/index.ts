@@ -15,7 +15,7 @@ let router = createRouter({
       return { top: 0 }
   }
 });
-// router = transitionExtend(router)
+router = transitionExtend(router)
 
  
 // 对router对象扩展
