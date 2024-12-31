@@ -12,7 +12,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import { data } from './data'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
 

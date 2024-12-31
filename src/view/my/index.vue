@@ -37,22 +37,22 @@
   </div>
   <div>
     <div class="tabbar-wrap d-flex-bet-cent">
-      <div class="tabbar-item" @click="navigateTo('/')">
+      <div class="tabbar-item" @click="tabbarFun('/')">
         <img src="@homeImg/home-icon.png" />
         <p>首页</p>
       </div>
-      <div class="tabbar-item" @click="navigateTo('/localChart')">
+      <div class="tabbar-item" @click="tabbarFun('/localChart')">
         <img src="@homeImg/chat-icon.png" />
         <p>闲聊</p>
       </div>
-      <div class="tabbar-add" @click="navigateTo('/publishQuick')">
+      <div class="tabbar-add" @click="tabbarFun('/publishQuick')">
         <img src="@homeImg/tabbar-add.png" />
       </div>
-      <div class="tabbar-item" @click="navigateTo('/news')">
+      <div class="tabbar-item" @click="tabbarFun('/news')">
         <img src="@homeImg/news-icon.png" />
         <p>消息</p>
       </div>
-      <div class="tabbar-item" @click="navigateTo('/my')">
+      <div class="tabbar-item" @click="tabbarFun('/my')">
         <img src="@homeImg/my-active-icon.png" />
         <p class="active">我的</p>
       </div>
@@ -66,9 +66,11 @@
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
 import { releaseData, linkData } from './data'
 import { showConfirmDialog } from 'vant'
+import {useRouter} from 'vue-router'
 import 'vant/es/dialog/style'
-const { navigateTo, navigateBack } = useRouterNavigation()
+const { navigateTo } = useRouterNavigation()
 
+const router = useRouter()
 const quitFun = () => {
   showConfirmDialog({
     message: '您确认退出登录吗？'
@@ -79,6 +81,10 @@ const quitFun = () => {
     .catch(() => {
       // on cancel
     })
+}
+
+const tabbarFun = (path:string) =>{
+  router.replace(path)
 }
 </script>
 

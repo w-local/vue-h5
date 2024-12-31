@@ -59,7 +59,7 @@ export const infoData = [
     id: '11',
     img: 'test',
     name: '曼谷餐厅',
-    region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 4F,',
+    region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 424rue Saint lazare75009，暹罗广场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 424rue Saint lazare75009，暹罗广场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 424rue Saint lazare75009，暹罗广场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 4F,',
     type: '餐饮美食',
     location: '曼谷',
     phone: '+6234324324'
@@ -68,7 +68,7 @@ export const infoData = [
     id: '11',
     img: 'test',
     name: '曼谷餐厅',
-    region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',
+    region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 424rue Saint lazare75009，暹罗广场S场Siam Square 4F, Siam Square 4F…',
     type: '餐饮美食',
     location: '曼谷',
     phone: '+6234324324'
@@ -77,7 +77,7 @@ export const infoData = [
     id: '11',
     img: 'test',
     name: '曼谷餐厅',
-    region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',
+    region: '24rue Saint lazare75009，暹场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 424rue Saint lazare75009，暹罗广场S罗广场Siam Square 4F, Siam Square 4F…',
     type: '餐饮美食',
     location: '曼谷',
     phone: '+6234324324'
@@ -86,7 +86,7 @@ export const infoData = [
     id: '11',
     img: 'test',
     name: '曼谷餐厅',
-    region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',
+    region: '24rue Saint lazare75009，暹场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 424rue Saint lazare75009，暹罗广场S罗广场Siam Square 4F, Siam Square 4F…',
     type: '餐饮美食',
     location: '曼谷',
     phone: '+6234324324'
@@ -95,7 +95,7 @@ export const infoData = [
     id: '11',
     img: 'test',
     name: '曼谷餐厅',
-    region: '24rue Saint lazare75009，暹罗广场Siam Square 4F, Siam Square 4F…',
+    region: '24rue Saint lazare75009，暹场Siam Square 4F, 暹罗广场Siam Square 4F,暹罗广场Siam Square 424rue Saint lazare75009，暹罗广场S罗广场Siam Square 4F, Siam Square 4F…',
     type: '餐饮美食',
     location: '曼谷',
     phone: '+6234324324'

@@ -26,6 +26,7 @@ export const typeData = [
     icon: 'icon-minsu',
     bg: ['#EF5852', '#FA8655'],
     childrenBg: '#FFF6F1',
+    url: '/homestay',
     childrenData: [
       {
         name: '公寓',
@@ -44,6 +45,7 @@ export const typeData = [
     icon: 'icon-cheliang',
     bg: ['#4086F8', '#51AFF5'],
     childrenBg: '#F0F9FE',
+    url: '/car',
     childrenData: [
       {
         name: '租车',
@@ -62,6 +64,7 @@ export const typeData = [
     icon: 'icon-zhaopin',
     bg: ['#6580FB', '#68A4F2'],
     childrenBg: '#F2F4FF',
+    url: '/hire',
     childrenData: [
       {
         name: '招聘',
@@ -80,6 +83,7 @@ export const typeData = [
     icon: 'icon-ershou',
     bg: ['#32C3B5', '#58D5B1'],
     childrenBg: '#ECFCF9',
+     url: '/secondHand',
     childrenData: [
       {
         name: '出售',
@@ -98,6 +102,7 @@ export const typeData = [
     icon: 'icon-fujin',
     bg: ['#FF8B3D', '#FDA545'],
     childrenBg: '#FFF6F1',
+    url: '/vicinity',
     childrenData: [
       {
         name: '吃喝',

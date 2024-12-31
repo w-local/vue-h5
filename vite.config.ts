@@ -12,8 +12,8 @@ export default (): UserConfig => {
  return{
   base:  '/',
   server: {
-    // host: 'localhost',
-    host:'192.168.31.34',
+    host: 'localhost',
+    // host:'192.168.31.34',
     port: 8008,
     strictPort: false, // 设为 true 时若端口已被占用则会直接退出，而不是尝试下一个可用端口
     open: false,
@@ -53,6 +53,7 @@ export default (): UserConfig => {
       '@hireImg': resolve(__dirname, 'src/assets/hireImg'),
       '@currencyImg': resolve(__dirname, 'src/assets/currencyImg'),
       '@myImg': resolve(__dirname, 'src/assets/myImg'),
+      '@secondImg': resolve(__dirname, 'src/assets/secondImg'),
       '@temp': resolve(__dirname, 'src/components'),
     }
   },

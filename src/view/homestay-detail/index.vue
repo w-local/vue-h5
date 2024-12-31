@@ -10,7 +10,7 @@
       </van-sticky>
       <van-swipe :autoplay="3000">
         <van-swipe-item v-for="idx in 4" ::key="idx">
-          <img class="banner-img" src="@detailImg/test-img.png" />
+          <img class="banner-img" src="@detailImg/aa.png" />
         </van-swipe-item>
         <template #indicator="{ active, total }">
           <div class="custom-indicator">{{ active + 1 }}/{{ total }}</div>

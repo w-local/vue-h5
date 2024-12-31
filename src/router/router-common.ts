@@ -64,6 +64,10 @@ export default [
     component: () => import('../view/local-chart-detail/index.vue')
   },
   {
+    path: '/publishChart', //发布本地闲聊
+    component: () => import('../view/publish-chart/index.vue')
+  },
+  {
     path: '/news', //消息
     component: () => import('../view/news/index.vue')
   },
@@ -118,6 +122,10 @@ export default [
   {
     path: '/publishSecond', //发布二手
     component: () => import('../view/publish-second/index.vue')
+  },
+  {
+    path: '/search', //搜索页面
+    component: () => import('../view/search/index.vue')
   },
 ]
 

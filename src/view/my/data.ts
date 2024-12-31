@@ -32,7 +32,7 @@ export const releaseData = [
   {
     icon:'icon-ershou',
     name:'二手',
-    url: '/hire',
+    url: '/secondHand',
   },
   {
     icon:'icon-fujin',

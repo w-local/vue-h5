@@ -35,22 +35,22 @@
     </div>
     <div>
       <div class="tabbar-wrap d-flex-bet-cent">
-        <div class="tabbar-item" @click="navigateTo('/')">
+        <div class="tabbar-item" @click="tabbarFun('/')">
           <img src="@homeImg/home-icon.png" />
           <p>首页</p>
         </div>
-        <div class="tabbar-item" @click="navigateTo('/localChart')">
+        <div class="tabbar-item" @click="tabbarFun('/localChart')">
           <img src="@homeImg/chat-icon.png" />
           <p>闲聊</p>
         </div>
-        <div class="tabbar-add" @click="navigateTo('/publishQuick')">
+        <div class="tabbar-add" @click="tabbarFun('/publishQuick')">
           <img src="@homeImg/tabbar-add.png" />
         </div>
-        <div class="tabbar-item" @click="navigateTo('/news')">
+        <div class="tabbar-item" @click="tabbarFun('/news')">
           <img src="@homeImg/news-active-icon.png" />
           <p class="active">消息</p>
         </div>
-        <div class="tabbar-item" @click="navigateTo('/my')">
+        <div class="tabbar-item" @click="tabbarFun('/my')">
           <img src="@homeImg/my-icon.png" />
           <p>我的</p>
         </div>
@@ -61,9 +61,12 @@
 </template>
 
 <script setup lang="ts">
-import useRouterNavigation, { getAssetsFile } from '@config/utils'
 import 'vant/es/dialog/style'
-const { navigateTo, navigateBack } = useRouterNavigation()
+import {useRouter} from 'vue-router'
+const router = useRouter()
+const tabbarFun = (path:string) =>{
+  router.replace(path)
+}
 const dataArr = [
   {
     img: 'test-img',

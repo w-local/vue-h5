@@ -1,0 +1,90 @@
+  .head-wrap {
+    height: 7rem;
+    padding: 2rem 1.3rem 0 .625rem;
+    color: #fff;
+    background: url('@commonImg/head-bg1.png') no-repeat;
+    background-position: center top;
+    background-size: 100% 155%;
+  }
+
+  .left-arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .head-name {
+    margin-left: calc(100% - 64%);
+    font-weight: normal;
+    font-size: 1rem;
+    color: #FFFFFF;
+    line-height: 1.5rem;
+  }
+
+  .head-search {
+    flex: 1;
+    position: relative;
+    height: 1.9375rem;
+    font-size: .78rem;
+    color: rgba(0, 0, 0, 0.85);
+    border-radius: 1.125rem;
+    overflow: hidden;
+
+    .search-btn {
+      position: absolute;
+      right: .25rem;
+      width: 3.1rem;
+      height: 1.55rem;
+      line-height: 1.55rem;
+      text-align: center;
+      font-size: .7875rem;
+      color: #FFF3DE;
+      background: linear-gradient(270deg, #006EF6 0%, #006FF6 100%);
+      box-shadow: 0 0 .25rem 0 rgba(0, 0, 0, 0.05);
+      border-radius: 1.125rem;
+    }
+  }
+
+  .content {
+    margin-top: -0.75rem;
+    padding: .9375rem .8125rem;
+    border-radius: 1rem 1rem 0 0;
+    background: #fff;
+
+    .history-name {
+      margin-bottom: .5625rem;
+      font-weight: bold;
+      font-size: .9375rem;
+      color: rgba(0, 0, 0, 0.85);
+      line-height: 1.3125rem;
+    }
+
+    .history-list {
+      position: relative;
+      padding-right: 2.6875rem;
+      height: 4.5rem;
+      overflow: hidden;
+    }
+
+    .history-item {
+      margin-right: .375rem;
+      margin-bottom: .4375rem;
+      padding: .3125rem .6875rem;
+      font-size: .8125rem;
+      color: rgba(0, 0, 0, 0.65);
+      line-height: 1.1875rem;
+      border-radius: .875rem;
+      background: #F8F8F8;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-right: 0;
+    }
+  }
+
+  /deep/.van-search {
+    padding: 0;
+    width: 100%;
+  }

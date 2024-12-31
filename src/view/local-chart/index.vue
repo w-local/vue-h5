@@ -11,10 +11,10 @@
           </div>
         </div>
         <div class="head-list d-flex-bet-cent">
-          <div>
+          <div @click="navigateTo('/publishChart')">
             <img class="head-icon" src="@commonImg/fbsj.png" />
             <div>发布闲聊</div>
-            <div class="active"></div>
+            <!-- <div class="active"></div> -->
           </div>
           <div>
             <img class="head-icon" src="@commonImg/lxkf.png" />
@@ -52,22 +52,22 @@
     </div>
     <div>
       <div class="tabbar-wrap d-flex-bet-cent">
-        <div class="tabbar-item" @click="navigateTo('/')">
+        <div class="tabbar-item" @click="tabbarFun('/')">
           <img src="@homeImg/home-icon.png" />
           <p>首页</p>
         </div>
-        <div class="tabbar-item" @click="navigateTo('/localChart')">
+        <div class="tabbar-item" @click="tabbarFun('/localChart')">
           <img src="@homeImg/chat-active-icon.png" />
           <p class="active">闲聊</p>
         </div>
-        <div class="tabbar-add" @click="navigateTo('/publishQuick')">
+        <div class="tabbar-add" @click="tabbarFun('/publishQuick')">
           <img src="@homeImg/tabbar-add.png" />
         </div>
-        <div class="tabbar-item" @click="navigateTo('/news')">
+        <div class="tabbar-item" @click="tabbarFun('/news')">
           <img src="@homeImg/news-icon.png" />
           <p>消息</p>
         </div>
-        <div class="tabbar-item" @click="navigateTo('/my')">
+        <div class="tabbar-item" @click="tabbarFun('/my')">
           <img src="@homeImg/my-icon.png" />
           <p>我的</p>
         </div>
@@ -79,9 +79,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import useRouterNavigation, { getAssetsFile } from '@config/utils'
+import useRouterNavigation from '@config/utils'
+import {useRouter} from 'vue-router'
 const { navigateTo, navigateBack } = useRouterNavigation()
 const active = ref(0)
+const router = useRouter()
+const tabbarFun = (path:string) =>{
+  router.replace(path)
+}
 
 const dataData = ref([
   {

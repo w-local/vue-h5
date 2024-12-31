@@ -47,7 +47,7 @@
               <span>{{ item.location }}</span>
             </div>
           </div>
-          <div class="info-region ellipsis-tow">{{ item.region }}</div>
+          <div class="info-region ellipsis-three">{{ item.region }}</div>
           <div class="d-flex-bet-cent">
             <div class="info-type">{{ item.type }}</div>
             <div>

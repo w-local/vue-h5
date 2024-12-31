@@ -12,7 +12,7 @@
               </div>
               <img class="arrow" src="@homeImg/arrow-bottom.png" />
             </div>
-            <div class="search">
+            <div class="search" @click="navigateTo('/search')">
               <img class="search-bg" src="@homeImg/search-bg.png" />
               <div class="search-cont d-flex-bet-cent">
                 <div class="d-flex-i-cent">
@@ -36,7 +36,7 @@
     <div class="content-wrap">
       <div class="type-list d-flex-i-cent">
         <div class="type-item" v-for="(item, idx) in typeData" :key="idx">
-          <div class="item-wrap" :style="{ background: `linear-gradient( 180deg, ${item.bg[0]} 0%, ${item.bg[1]}  100%)` }">
+          <div class="item-wrap" :style="{ background: `linear-gradient( 180deg, ${item.bg[0]} 0%, ${item.bg[1]}  100%)` }" @click="navigateTo(`${item.url}?type=${Math.random() < 0.5 ? 0 : 1}`)">
             <img class="item-icon" :src="getAssetsFile(`homeImg/${item.icon}.png`)" />
             <div>{{ item.name }}</div>
           </div>
@@ -70,7 +70,7 @@
           <h3 class="title">大事件</h3>
           <span class="sub-title">最新最热资讯</span>
         </div>
-        <div class="event-item d-flex" v-for="idx in 2" :key="idx" @click="navigateTo('/eventDetail?id=11')">
+        <div class="event-item d-flex-bet" v-for="idx in 2" :key="idx" @click="navigateTo('/eventDetail?id=11')">
           <div>
             <div class="event-name ellipsis-three">棋牌室棋牌室棋牌室棋牌室棋牌室棋牌棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室棋牌室室棋牌室</div>
             <div class="d-flex-bet-cent event-type">
@@ -87,40 +87,50 @@
     </div>
     <div>
       <div class="tabbar-wrap d-flex-bet-cent">
-        <div class="tabbar-item" @click="navigateTo('/')">
+        <div class="tabbar-item" @click="tabbarFun('/')">
           <img src="@homeImg/home-active-icon.png" />
           <p class="active">首页</p>
         </div>
-        <div class="tabbar-item" @click="navigateTo('/localChart')">
+        <div class="tabbar-item" @click="tabbarFun('/localChart')">
           <img src="@homeImg/chat-icon.png" />
           <p>闲聊</p>
         </div>
-        <div class="tabbar-add" @click="navigateTo('/publishQuick')">
+        <div class="tabbar-add" @click="navigateTo('/PublishQuick')">
           <img src="@homeImg/tabbar-add.png" />
         </div>
-        <div class="tabbar-item" @click="navigateTo('/news')">
+        <div class="tabbar-item" @click="tabbarFun('/news')">
           <img src="@homeImg/news-icon.png" />
           <p>消息</p>
         </div>
-        <div class="tabbar-item" @click="navigateTo('/my')">
+        <div class="tabbar-item" @click="tabbarFun('/my')">
           <img src="@homeImg/my-icon.png" />
           <p>我的</p>
         </div>
       </div>
       <div class="round"></div>
     </div>
+    <PublishQuick/>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import PublishQuick from '@/view/publish-quick/index.vue'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
 import { tabData, typeData, bannerData } from './data'
+import { useRouter } from 'vue-router'
+
 const { navigateTo } = useRouterNavigation()
+const router = useRouter()
 const searchWrap = ref()
 const stickyFun = (isFixed: boolean) => {
   searchWrap.value.style.backgroundColor = isFixed ? '#0C95FD' : 'transparent'
 }
+
+const tabbarFun = (path: string) => {
+  router.replace(path)
+}
+
 </script>
 
 <style lang="less" scoped>

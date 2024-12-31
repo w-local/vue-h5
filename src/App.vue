@@ -3,7 +3,8 @@
     <van-loading color="#1989fa" />
   </div>
   <router-view v-slot="{ Component }">
-    <transition :name="router.customRouterData.transitionName">
+    <!-- :name="router.customRouterData.transitionName" -->
+    <transition >
       <component :is="Component" />
     </transition>
   </router-view>
