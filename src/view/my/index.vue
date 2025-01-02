@@ -84,7 +84,11 @@ const quitFun = () => {
 }
 
 const tabbarFun = (path:string) =>{
-  router.replace(path)
+  if (path != '/localChart') {
+    router.replace(path)
+  } else {
+    router.replace(path+'?isBar=1')
+  }
 }
 </script>
 

@@ -95,7 +95,7 @@
           <img src="@homeImg/chat-icon.png" />
           <p>闲聊</p>
         </div>
-        <div class="tabbar-add" @click="navigateTo('/PublishQuick')">
+        <div class="tabbar-add" @click="tabbarFun('/PublishQuick')">
           <img src="@homeImg/tabbar-add.png" />
         </div>
         <div class="tabbar-item" @click="tabbarFun('/news')">
@@ -128,7 +128,11 @@ const stickyFun = (isFixed: boolean) => {
 }
 
 const tabbarFun = (path: string) => {
-  router.replace(path)
+  if (path != '/localChart') {
+    router.replace(path)
+  } else {
+    router.replace(path+'?isBar=1')
+  }
 }
 
 </script>

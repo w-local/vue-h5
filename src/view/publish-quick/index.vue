@@ -5,7 +5,7 @@
       <img :src="getAssetsFile(`homeImg/${item.icon}.png`)" />
       <div>{{ item.name }}</div>
     </div>
-    <van-icon color="#999" size="32" name="close" @click="navigateBack()" />
+    <van-icon color="#999" size="32" name="close" @click="tabbarFun('/')" />
   </div>
   <img class="quick-img" src="@homeImg/quick-img.png" />
 </div>
@@ -14,8 +14,14 @@
 <script setup lang="ts">
 import { data } from './data'
 import useRouterNavigation, { getAssetsFile } from '@config/utils'
+import {useRouter} from 'vue-router'
 
-const { navigateTo, navigateBack } = useRouterNavigation()
+const router = useRouter()
+const { navigateTo } = useRouterNavigation()
+
+const tabbarFun = (path:string) =>{
+  router.replace(path)
+}
 </script>
 
 <style lang="less" scoped>

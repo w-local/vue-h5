@@ -65,6 +65,6 @@ export const linkData = [
   {
     icon:'icon-kefu',
     name:'在线客服',
-    url:'/agreement'
+    url:'/customerCenter'
   }
 ]

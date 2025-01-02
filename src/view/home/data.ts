@@ -17,7 +17,7 @@ export const bannerData = [
   {
     icon: 'zxkf',
     name: '在线客服',
-    url: '/localChart'
+    url: '/customerCenter'
   }
 ]
 export const typeData = [

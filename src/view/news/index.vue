@@ -65,7 +65,11 @@ import 'vant/es/dialog/style'
 import {useRouter} from 'vue-router'
 const router = useRouter()
 const tabbarFun = (path:string) =>{
-  router.replace(path)
+  if (path != '/localChart') {
+    router.replace(path)
+  } else {
+    router.replace(path+'?isBar=1')
+  }
 }
 const dataArr = [
   {
@@ -89,6 +93,28 @@ const dataArr = [
     time: '6天前',
     isNews: false,
     companyName: 'xxx有限公司'
+  },
+  {
+    img: 'test-img',
+    name: '福兴源家政',
+    txt: '沟通方便，谢谢',
+    time: '昨天',
+    isNews: true
+  },
+  {
+    img: 'test-img',
+    name: '原装笔记本电脑',
+    txt: '原装笔记本电脑',
+    time: '6天前',
+    isNews: false,
+    companyName: 'xxx有限公司'
+  },
+  {
+    img: 'test-img',
+    name: '福兴源家政',
+    txt: '沟通方便，谢谢',
+    time: '昨天',
+    isNews: true
   },
   {
     img: 'test-img',

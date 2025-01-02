@@ -3,7 +3,7 @@
     <van-sticky>
       <div class="head-wrap">
         <div class="d-flex-bet-cent">
-          <img class="left-arrow" src="@commonImg/left-arrow.png" @click="navigateBack()" />
+          <img class="left-arrow" :style="{visibility:isBar!='1'?'visible':'hidden'}" src="@commonImg/left-arrow.png" @click="navigateBack" />
           <h1 class="head-name">本地闲聊</h1>
           <div class="d-flex-i-cent switch-content ellipsis-one">
             <img class="switch-icon" src="@commonImg/dizhi-icon.png" />
@@ -80,12 +80,19 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import useRouterNavigation from '@config/utils'
-import {useRouter} from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 const { navigateTo, navigateBack } = useRouterNavigation()
 const active = ref(0)
 const router = useRouter()
-const tabbarFun = (path:string) =>{
-  router.replace(path)
+const route = useRoute()
+const isBar = route.query.isBar
+console.log( route)
+const tabbarFun = (path: string) => {
+  if (path != '/localChart') {
+    router.replace(path)
+  } else {
+    router.replace(path+'?isBar=1')
+  }
 }
 
 const dataData = ref([

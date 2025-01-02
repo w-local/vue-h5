@@ -16,7 +16,6 @@ import { useLoadStore } from './store/index'
 const store = useLoadStore()
 
 const router: any = useRouter()
-console.log(router, 'route')
 </script>
 
 <style scoped>

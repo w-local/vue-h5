@@ -88,15 +88,15 @@ function transitionExtend(orgin:any) {
   // replace 修改路由历史，并设置动画
   router.replace = function () {
  
-    router.removeLastRouterPath()
-    let location = arguments[0]
-    if (typeof location == 'string') {
-      router.addRouterPath(location)
-    } else {
-      router.addRouterPath(location.path)
-    }
+    // router.removeLastRouterPath()
+    // let location = arguments[0]
+    // if (typeof location == 'string') {
+    //   router.addRouterPath(location)
+    // } else {
+    //   router.addRouterPath(location.path)
+    // }
  
-    router.customRouterData.transitionName = 'slide_left'
+    router.customRouterData.transitionName = ''
  
     router.__proto__.replace.call(this, ...arguments)
   };
@@ -137,44 +137,44 @@ function transitionExtend(orgin:any) {
    * 前进：微信上的前进按钮，web前进
    * // 前进这里有个坑，待解决，先忽略
    **/
-  router.otherEventTransitionName = function (toPath:any) {
-    if (router.customRouterData.transitionName != '') {
-      // 没有数据意味着从，其他操作方式得到的路由变化
-      return;
-    }
+  // router.otherEventTransitionName = function (toPath:any) {
+  //   if (router.customRouterData.transitionName != '') {
+  //     // 没有数据意味着从，其他操作方式得到的路由变化
+  //     return;
+  //   }
  
-    let toIndex = router.indexOf(toPath)
-    if (toIndex == -1 || router.customRouterData.history.length - toIndex != 2) {
-      // 不存在，并且历史
-      router.addRouterPath(toPath)
-      router.customRouterData.transitionName = 'slide_left'
-    } else {
-      router.removeLastRouterPath()
-      router.customRouterData.transitionName = 'slide_right'
-    }
-  }
+  //   let toIndex = router.indexOf(toPath)
+  //   if (toIndex == -1 || router.customRouterData.history.length - toIndex != 2) {
+  //     // 不存在，并且历史
+  //     router.addRouterPath(toPath)
+  //     router.customRouterData.transitionName = 'slide_left'
+  //   } else {
+  //     router.removeLastRouterPath()
+  //     router.customRouterData.transitionName = 'slide_right'
+  //   }
+  // }
  
-  // 是否已经初始化
-  let isInit = false;
+  // // 是否已经初始化
+  // let isInit = false;
  
-  // 跳转之前
-  router.beforeEach((to:any, from:any, next:any) => {
-    if (isInit) {
-      router.otherEventTransitionName(to.path, from.path)
-    } else {
-      isInit = true;
-      router.initRouterPaths(to.path)
-    }
-    next();
-  })
+  // // 跳转之前
+  // router.beforeEach((to:any, from:any, next:any) => {
+  //   if (isInit) {
+  //     router.otherEventTransitionName(to.path, from.path)
+  //   } else {
+  //     isInit = true;
+  //     router.initRouterPaths(to.path)
+  //   }
+  //   next();
+  // })
  
-  // 跳转之后
-  router.afterEach((to:any, from:any) => {
-    setTimeout(() => {
-      // 使用动画之后立即移除
-      router.customRouterData.transitionName = ''
-    }, 300)
-  })
+  // // 跳转之后
+  // router.afterEach((to:any, from:any) => {
+  //   setTimeout(() => {
+  //     // 使用动画之后立即移除
+  //     router.customRouterData.transitionName = ''
+  //   }, 300)
+  // })
  
   return router
 }
