@@ -131,10 +131,10 @@ export default [
     path: '/customerCenter', //客服中心
     component: () => import('../view/customer-center/index.vue')
   },
-  // {
-  //   path: '/customer', //客服中心
-  //   component: () => import('../view/customer/index.vue')
-  // },
+  {
+    path: '/customer', //客服中心
+    component: () => import('../view/customer/index.vue')
+  },
 ]
 
 
