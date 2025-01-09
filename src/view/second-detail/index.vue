@@ -60,41 +60,60 @@
             <div class="comment-item" v-for="(item, idx) in commentData" :key="idx">
               <div class="d-flex">
                 <img class="comment-icon" :src="getAssetsFile(`myImg/${item.icon}.png`)" />
-                <div class="d-flex-bet comment-right">
-                  <div>
-                    <div class="comment-name">{{ item.name }}</div>
-                    <div class="comment-txt">{{ item.comment }}</div>
+                <div class="comment-right">
+                  <div class="d-flex-bet">
+                    <div>
+                      <div class="comment-name">{{ item.name }}</div>
+                      <div class="comment-txt">
+                        {{ item.comment }}
+                        <img v-if="item.expressionArr?.length" class="expression-icon" v-for="(img, idx) in item.expressionArr" :key="idx" :src="getAssetsFile(`detailImg/${img}.png`)" />
+                      </div>
+                      <div v-if="item.imgArr?.length" class="comment-imgs" v-for="(img, idx) in item.imgArr" :key="idx">
+                        <img class="comment-img" :src="getAssetsFile(`detailImg/${img}.png`)" />
+                      </div>
+                    </div>
+                    <div class="d-flex-column-center">
+                      <img class="icon-like" src="@detailImg/icon-like.png" />
+                      <div class="like-num">{{ item.likeNum ? item.likeNum : '首赞' }}</div>
+                    </div>
+                  </div>
+                  <div class="d-flex-bet">
                     <div class="d-flex">
                       <div class="comment-time">{{ item.time }}</div>
                       <div class="comment-location">{{ item.location }}</div>
                       <div class="comment-author" v-if="item.isAuthor">作者回复了</div>
                     </div>
-                  </div>
-                  <div class="text-right">
-                    <img class="icon-like" src="@detailImg/icon-like.png" />
-                    <div class="like-num">{{ item.likeNum ? item.likeNum : '首赞' }}</div>
                     <div class="comment-ta">回复Ta</div>
                   </div>
                 </div>
               </div>
               <div class="d-flex sub-item" v-for="(subItem, subIdx) in item.data" :key="subIdx">
                 <img class="comment-icon" :src="getAssetsFile(`myImg/${subItem.icon}.png`)" />
-                <div class="d-flex-bet comment-right">
-                  <div>
-                    <div class="d-flex">
-                      <div class="comment-name">{{ subItem.name }}</div>
-                      <div class="comment-author" v-if="subItem.isAuthor">作者</div>
+                <div class="comment-right">
+                  <div class="d-flex-bet">
+                    <div>
+                      <div class="d-flex">
+                        <div class="comment-name">{{ subItem.name }}</div>
+                        <div class="comment-author" v-if="subItem.isAuthor">作者</div>
+                      </div>
+                      <div class="comment-txt">
+                        {{ subItem.comment }}
+                        <img v-if="subItem.expressionArr?.length" class="expression-icon" v-for="(img, idx) in subItem.expressionArr" :key="idx" :src="getAssetsFile(`detailImg/${img}.png`)" />
+                      </div>
+                      <div v-if="subItem.imgArr?.length" class="comment-imgs" v-for="(img, idx) in subItem.imgArr" :key="idx">
+                        <img class="comment-img" :src="getAssetsFile(`detailImg/${img}.png`)" />
+                      </div>
                     </div>
-
-                    <div class="comment-txt">{{ subItem.comment }}</div>
+                    <div class="d-flex-column-center">
+                      <img class="icon-like" src="@detailImg/icon-like.png" />
+                      <div class="like-num">{{ subItem.likeNum ? subItem.likeNum : '首赞' }}</div>
+                    </div>
+                  </div>
+                  <div class="d-flex-bet">
                     <div class="d-flex">
                       <div class="comment-time">{{ subItem.time }}</div>
                       <div class="comment-location">{{ subItem.location }}</div>
                     </div>
-                  </div>
-                  <div class="text-right">
-                    <img class="icon-like" src="@detailImg/icon-like.png" />
-                    <div class="like-num">{{ subItem.likeNum ? subItem.likeNum : '首赞' }}</div>
                     <div class="comment-ta">回复Ta</div>
                   </div>
                 </div>
